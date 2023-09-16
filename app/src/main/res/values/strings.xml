@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="Dev">Dev Gurus</string>
+    <string name="from">From</string>
+    <string name="name">Name</string>
+</resources>
