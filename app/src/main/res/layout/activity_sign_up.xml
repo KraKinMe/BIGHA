@@ -25,7 +25,7 @@
             android:text="BIGHA"
             android:textStyle="bold"
             android:fontFamily="sans-serif-medium"
-            android:textSize="32sp"
+            android:textSize="60sp"
             android:textColor="@color/white"/>
     </LinearLayout>
 
@@ -63,11 +63,13 @@
                 android:text="Email Address"
                 android:alpha="0.7"
                 android:textStyle="bold"/>
+
             <EditText
+                android:id="@+id/emailEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
-                android:drawableEnd="@drawable/baseline_done_24"/>
+                android:drawableEnd="@drawable/baseline_done_24" />
 
             <View
                 android:layout_width="wrap_content"
@@ -92,7 +94,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Remember Me"
-                    anndroid:layout_centerVertical="true"
+                    android:layout_centerVertical="true"
                     android:alpha="0.7"/>
 
                 <TextView
@@ -111,7 +113,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:text="LOGIN"
-                app:cornerRadius="32dp"/>
+                />
 
             <View
                 android:layout_width="wrap_content"
@@ -125,6 +127,9 @@
                 android:textColor="@color/my_secondary"
                 android:textStyle="bold"
                 android:alpha="0.7"/>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"/>
 
         </LinearLayout>
 
