@@ -73,6 +73,7 @@
                 android:id="@+id/nameEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:hint="ex-'parth'"
                 android:inputType="textPersonName"
                  />
 
@@ -91,8 +92,9 @@
                 android:id="@+id/MobileEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text|phone"
-                />
+                android:hint="707812XXXX"
+                android:inputType="text|phone" />
+
             <View
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"/>
@@ -106,6 +108,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
+                android:hint="a-z/A-Z/0-9"
                 android:drawableEnd="@drawable/password_eye"/>
 
             <View
@@ -121,6 +124,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
+                android:hint="Same as above"
                 android:drawableEnd="@drawable/password_eye"/>
 
             <RelativeLayout

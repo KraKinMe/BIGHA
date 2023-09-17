@@ -69,6 +69,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
+                android:hint="parth1234@gmail.com"
                 android:drawableEnd="@drawable/baseline_done_24" />
 
             <View
@@ -84,6 +85,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
+                android:hint="a-z/A-Z/0-9"
                 android:drawableEnd="@drawable/password_eye"/>
 
             <RelativeLayout
