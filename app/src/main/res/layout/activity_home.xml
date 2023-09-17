@@ -8,8 +8,8 @@
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="72dp"
-    android:background="@color/skyBlue"
-    android:alpha="0.6"
+    android:background="@color/my_secondary"
+    android:alpha="0.9"
     android:paddingBottom="5dp"
 
     >
@@ -21,6 +21,7 @@
         android:layout_marginBottom="20dp"
         android:src="@drawable/baseline_view_headline_24"
         app:tint="#4E2222"
+        android:onClick="HamOpen"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         />
@@ -29,6 +30,7 @@
         android:layout_height="match_parent"
         android:layout_marginBottom="15dp"
         android:text="BIGHA"
+        android:textColor="@color/white"
         android:layout_marginTop="25dp"
         android:layout_marginLeft="10dp"
         android:textSize="20dp"
