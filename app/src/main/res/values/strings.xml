@@ -3,4 +3,19 @@
     <string name="Dev">Dev Gurus</string>
     <string name="from">From</string>
     <string name="name">Name</string>
+    <string name="Welcome">WELCOME</string>
+    <string name="Enter_info">Please Enter Your Information"</string>
+    <string name="Mobile_NO">Mobile No.</string>
+    <string name="Create_pass">Create  Password</string>
+    <string name="Reenter_Pass">Re-Enter Password</string>
+    <string name="Remember_me">Remember Me</string>
+    <string name="Register_me">REGISTER ME</string>
+    <string name="Bigha">BIGHA</string>
+    <string name="Login_with_info">Please login with your information</string>
+    <string name="Email">Email Address</string>
+    <string name="Password">Password</string>
+    <string name="Remember_Me">Remember Me</string>
+    <string name="Forgot_pass">Forgot Password</string>
+    <string name="Login">LOGIN</string>
+    <string name="Register_Now">OR REGISTER NOW</string>
 </resources>
