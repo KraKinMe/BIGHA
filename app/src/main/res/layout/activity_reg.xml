@@ -105,6 +105,7 @@
                 android:alpha="0.7"
                 android:textStyle="bold"/>
             <EditText
+                android:id="@+id/passs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
@@ -147,7 +148,9 @@
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
+                android:id="@+id/submitsignup"
                 android:text="@string/Register_me"
+
                 />
 
             <View

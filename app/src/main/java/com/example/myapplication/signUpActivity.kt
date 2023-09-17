@@ -11,11 +11,21 @@ class signUpActivity : AppCompatActivity() {
     private lateinit var Email: EditText
     private lateinit var Password:EditText
     private lateinit var submit: Button
+
+    var email= arrayOf("2004","2003","2002")
+    var pass = arrayOf("2004","2003","2002")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
         submit = findViewById(R.id.submitlogin)
-
+        val intent=intent
+        val p=intent.getStringExtra("P")
+        val n=intent.getStringExtra("N")
+        if(p!=null&&n!=null){
+            email=email+n
+            pass=pass+p
+        }
         submit.setOnClickListener{
             onhomepage()
         }
@@ -24,9 +34,6 @@ class signUpActivity : AppCompatActivity() {
         startActivity(Intent(this,regActivity::class.java))
         finish()
     }
-    val email= arrayOf("7078128388","45164876847","2002")
-    val pass = arrayOf("2004","2003","2002")
-
 
     fun onhomepage(){
         Email = findViewById(R.id.emailEditText)
