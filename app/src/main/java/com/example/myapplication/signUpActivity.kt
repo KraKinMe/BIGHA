@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -10,6 +11,8 @@ class signUpActivity : AppCompatActivity() {
         setContentView(R.layout.activity_sign_up)
     }
     fun onRegisterNowClicked(view: View) {
-      setContentView(R.layout.activity_reg)
+        startActivity(Intent(this,regActivity::class.java))
+        finish()
     }
+
 }
