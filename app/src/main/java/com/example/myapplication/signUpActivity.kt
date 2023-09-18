@@ -14,7 +14,6 @@ class signUpActivity : AppCompatActivity() {
 
     var email= arrayOf("2004","2003","2002")
     var pass = arrayOf("2004","2003","2002")
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
