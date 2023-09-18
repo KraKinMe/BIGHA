@@ -19,5 +19,5 @@
     <string name="Login">LOGIN</string>
     <string name="Your_Name">Your Name</string>
     <string name="Register_Now">OR REGISTER NOW</string>
-
+    <string name="MicroFinanceTxt"></string>
 </resources>
