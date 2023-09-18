@@ -12,4 +12,8 @@
     <color name="Blue">#00FFFF</color>
     <color name="Iris">#5D3FD3</color>
     <color name="LightGrey">#D3D3D3</color>
+    <color name="Aqua">#00FFFF</color>
+    <color name="Claret">#DE3163</color>
+    <color name="LightBlack">#4C4C4C</color>
+    <color name="alagBlue">#003042</color>
 </resources>
