@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.graphics.Color
 import androidx.core.content.ContextCompat
 
 
@@ -15,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        window.statusBarColor=ContextCompat.getColor(this,R.color.brown)
+        window.statusBarColor=Color.rgb(0,0,0)
 
         Handler(Looper.getMainLooper()).postDelayed({
             startActivity(Intent(this,signUpActivity::class.java))
