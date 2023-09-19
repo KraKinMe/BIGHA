@@ -35,7 +35,6 @@
                     android:layout_height="300dp"
                     android:src="@drawable/app_back"
                     android:layout_marginTop="-20dp"
-                    android:onClick="HamOpen"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
                 <!-- Add more content to HomeDiv1 if needed -->
