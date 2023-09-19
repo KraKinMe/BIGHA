@@ -8,6 +8,7 @@
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
+        app:headerLayout="@layout/header"
         app:menu="@menu/menu"
         android:layout_gravity="start"
         android:id="@+id/nav_view"
@@ -35,7 +36,6 @@
                     android:layout_height="300dp"
                     android:src="@drawable/app_back"
                     android:layout_marginTop="-20dp"
-                    android:onClick="HamOpen"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
                 <!-- Add more content to HomeDiv1 if needed -->
