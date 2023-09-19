@@ -20,4 +20,6 @@
     <string name="Your_Name">Your Name</string>
     <string name="Register_Now">OR REGISTER NOW</string>
     <string name="MicroFinanceTxt"></string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
 </resources>
