@@ -25,12 +25,7 @@ class homeActivity : AppCompatActivity() {
         toggle.syncState()
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        navView.setNavigationItemSelectedListener {
-            when(it.itemId){
-                R.id.noob ->Toast.makeText(applicationContext,"Click noob",Toast.LENGTH_SHORT).show()
-            }
-            true
-        }
+
 
     }
 
