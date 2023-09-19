@@ -15,7 +15,7 @@ class homeActivity : AppCompatActivity() {
     lateinit var toggle: ActionBarDrawerToggle
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.check)
+        setContentView(R.layout.activity_home)
         window.statusBarColor = Color.rgb(0,0,0)
         val drawerLayout:DrawerLayout = findViewById(R.id.drawer)
         val navView:NavigationView = findViewById(R.id.nav_view)
