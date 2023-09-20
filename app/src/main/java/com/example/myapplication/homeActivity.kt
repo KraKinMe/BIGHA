@@ -40,6 +40,14 @@ class homeActivity : AppCompatActivity() {
             showCustomDialogBox(FName,FExplain)
         }
 
+        val btnKnowMoreRent : Button = findViewById(R.id.btnKnowMoreRent)
+
+        btnKnowMoreRent.setOnClickListener {
+            val FName:String?="Rental Platform"
+            val FExplain:String?="Farmers can Rent out as well as Take others items on Rent"
+            showCustomDialogBox(FName,FExplain)
+        }
+
     }
 
     private fun showCustomDialogBox(FName: String?,FExplain:String?) {

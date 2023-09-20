@@ -129,6 +129,7 @@
                     android:layout_marginTop="30dp"
                     />
                 <Button
+                    android:id="@+id/btnKnowMoreRent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/know_more"
