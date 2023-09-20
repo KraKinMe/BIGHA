@@ -15,6 +15,7 @@ class regActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_reg)
+        supportActionBar?.hide()
         submit=findViewById(R.id.submitsignup)
         submit.setOnClickListener{
             addVal()
