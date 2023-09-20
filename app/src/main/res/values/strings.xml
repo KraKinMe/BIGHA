@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Bigha</string>
     <string name="Dev">Dev Gurus</string>
     <string name="from">From</string>
     <string name="name">Name</string>
@@ -22,4 +22,5 @@
     <string name="MicroFinanceTxt"></string>
     <string name="open">Open</string>
     <string name="close">Close</string>
+    <string name="Rental_plat">Rental Platform</string>
 </resources>

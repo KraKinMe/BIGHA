@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginRight="130dp"
-            android:text="Rental Platform"
+            android:text="@string/Rental_plat"
             android:textStyle="bold"
             android:textAlignment="center"
             android:textSize="20dp"
