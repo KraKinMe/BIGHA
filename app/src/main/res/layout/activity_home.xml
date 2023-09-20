@@ -121,6 +121,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Find Tools Nearby"
+                    android:id="@+id/Tool_button"
+                    android:onClick="RedirectRent"
                     android:layout_marginTop="30dp"
                     />
                 <Button
@@ -157,6 +159,7 @@
                     android:fontFamily="sans-serif-condensed"
                     android:textSize="20dp"
                     android:textStyle="bold"
+                    android:layout_marginBottom="20dp"
                     />
                 <Button
                     android:layout_width="wrap_content"
