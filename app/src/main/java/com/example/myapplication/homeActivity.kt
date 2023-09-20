@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
+import java.lang.ProcessBuilder.Redirect
 
 class homeActivity : AppCompatActivity() {
     lateinit var toggle: ActionBarDrawerToggle
@@ -36,5 +37,10 @@ class homeActivity : AppCompatActivity() {
     fun RedirectRent(view: View){
         startActivity(Intent(this,RentActivity::class.java))
         finish()
+    }
+    fun RedirectAgro(view: View){
+        startActivity(Intent(this,agrotourismActivity::class.java))
+        finish()
+
     }
 }
