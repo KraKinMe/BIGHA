@@ -15,17 +15,17 @@
         android:id="@+id/topBar"
         android:layout_width="match_parent"
         android:layout_height="60dp">
-    <ImageView
-        android:layout_width="30dp"
-        android:layout_height="wrap_content"
-        android:onClick="previous"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginLeft="20dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:src="@drawable/baseline_arrow_back_24"
-        android:layout_marginTop="5dp"
-        >
-    </ImageView>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:onClick="previous"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:layout_marginTop="5dp"
+            >
+        </ImageView>
 
         <TextView
             android:layout_width="wrap_content"
@@ -62,7 +62,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/search_bar"
             android:layout_weight="1"
-            android:hint="Search....."
+            android:hint="@string/search"
 
             style="@style/BoldHint"
             android:inputType="text"/>
@@ -73,52 +73,52 @@
             android:onClick="Searchfn"/>
 
     </LinearLayout>
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:layout_constraintTop_toBottomOf="@+id/Search_layout"
-    app:layout_constraintRight_toRightOf="parent"
-    app:layout_constraintLeft_toLeftOf="parent"
-    android:id="@+id/filterLayout"
-    android:onClick="OpenFilter"
-    >
-    <Button
-        android:layout_width="150dp"
-        android:text="YOUR RENTALS"
-        android:drawableLeft="@drawable/baseline_add_shopping_cart_24"
-        android:layout_height="55dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="60dp"
-        />
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginRight="15dp"
-    >
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Filter"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:id="@+id/FilterText"
-        android:layout_marginLeft="25dp"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Search_layout"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/filterLayout"
+        android:onClick="OpenFilter"
+        >
+        <Button
+            android:layout_width="150dp"
+            android:text="@string/Your_Rentals"
+            android:drawableLeft="@drawable/baseline_add_shopping_cart_24"
+            android:layout_height="55dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="60dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="15dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/filter"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:id="@+id/FilterText"
+                android:layout_marginLeft="25dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Search_layout"
 
-        />
+                />
 
-    <ImageView
-        android:layout_width="66dp"
-        android:layout_height="31dp"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/filter"
-        app:layout_constraintRight_toLeftOf="@+id/FilterText"
-        app:layout_constraintTop_toBottomOf="@+id/Search_layout"></ImageView>
-</LinearLayout>
-</LinearLayout>
+            <ImageView
+                android:layout_width="66dp"
+                android:layout_height="31dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/filter"
+                app:layout_constraintRight_toLeftOf="@+id/FilterText"
+                app:layout_constraintTop_toBottomOf="@+id/Search_layout"></ImageView>
+        </LinearLayout>
+    </LinearLayout>
 
 
     <LinearLayout
@@ -154,7 +154,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nearby Machinery"
+            android:text="@string/nearby_machinery"
             android:textAlignment="center"
             android:textStyle="bold"
             android:layout_marginTop="20dp"
@@ -190,7 +190,7 @@
             >
 
         </TextView>
-
+        <!--        Not changing this one as text needs to be replaced by IMAGE-->
     </androidx.cardview.widget.CardView>
 
 
@@ -209,7 +209,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nearby LiveStock"
+            android:text="@string/nearby_livestock"
             android:textAlignment="center"
             android:textStyle="bold"
             android:layout_marginTop="20dp"

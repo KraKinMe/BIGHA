@@ -69,7 +69,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
-                android:hint="707812XXXX" />
+                android:hint="@string/your_mob_no" />
 
             <View
                 android:layout_width="wrap_content"
@@ -85,7 +85,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
-                android:hint="a-z/A-Z/0-9"
+                android:hint="@string/a_z_a_z_0_9"
                 android:drawableEnd="@drawable/password_eye"/>
 
             <RelativeLayout
