@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="130dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -20,18 +21,18 @@
     app:layout_constraintVertical_bias="0.5"
     app:layout_constraintHorizontal_bias="0.5"
   />
-<TextView
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/logo"
-        app:layout_constraintLeft_toLeftOf="parent"
-    android:textColor="@color/white"
-    android:text="BIGHA"
-    android:textAlignment="center"
-    android:layout_marginLeft="120dp"
-    android:textSize="30dp"
-    android:fontFamily="sans-serif-condensed"
-        >
+        android:fontFamily="sans-serif-condensed"
+        android:text="BIGHA"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo">
 
     </TextView>
 </androidx.constraintlayout.widget.ConstraintLayout>
