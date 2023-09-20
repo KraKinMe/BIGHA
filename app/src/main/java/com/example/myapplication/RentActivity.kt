@@ -16,4 +16,8 @@ class RentActivity : AppCompatActivity() {
         startActivity(Intent(this,homeActivity::class.java))
         finish()
     }
+    fun addyourmachineforrent(view: View){
+        startActivity(Intent(this,addforrentActivity::class.java))
+        finish()
+    }
 }

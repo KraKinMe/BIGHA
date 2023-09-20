@@ -249,6 +249,7 @@
         android:layout_marginTop="15dp"
         android:background="@drawable/plluss"
         android:id="@+id/Edit"
+        android:onClick="addyourmachineforrent"
         />
 
 
