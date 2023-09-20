@@ -218,6 +218,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/agro_tourism_profile"
+                    android:id="@+id/GotoAgro"
+                    android:onClick="RedirectAgro"
                     android:layout_marginLeft="4dp"
                     android:layout_marginTop="40dp"
                     android:backgroundTint="@color/alagBlue"
