@@ -14,28 +14,28 @@
         android:background="@color/LightGrey"
         android:id="@+id/topBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="60dp">
     <ImageView
-        android:layout_width="wrap_content"
+        android:layout_width="30dp"
         android:layout_height="wrap_content"
         android:onClick="previous"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginLeft="20dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:src="@drawable/baseline_arrow_back_24"
-        android:layout_marginTop="13dp"
+        android:layout_marginTop="5dp"
         >
     </ImageView>
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:gravity="center"
+            android:layout_marginRight="130dp"
             android:text="Rental Platform"
             android:textStyle="bold"
             android:textAlignment="center"
-            android:textSize="30dp"
+            android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -48,7 +48,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_height="55dp"
         android:id="@+id/Search_layout"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="14dp"
         android:layout_marginLeft="2dp"
         android:layout_marginEnd="2dp"
         android:background="@drawable/black_border"
@@ -78,6 +78,7 @@
     android:layout_height="wrap_content"
     app:layout_constraintTop_toBottomOf="@+id/Search_layout"
     app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
     android:id="@+id/filterLayout"
     android:onClick="OpenFilter"
     >
@@ -90,28 +91,31 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="70dp"
         />
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Filter"
-        android:textSize="22dp"
+        android:textSize="22sp"
         android:textStyle="bold"
         android:id="@+id/FilterText"
         android:layout_marginLeft="30dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Search_layout"
-        ></TextView>
+
+        />
 
     <ImageView
-        android:layout_width="76dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="13dp"
+        android:layout_width="66dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="20dp"
         android:src="@drawable/filter"
         app:layout_constraintRight_toLeftOf="@+id/FilterText"
         app:layout_constraintTop_toBottomOf="@+id/Search_layout"></ImageView>
-
+</LinearLayout>
 </LinearLayout>
 
 
@@ -138,6 +142,9 @@
         android:layout_height="200dp"
         app:layout_constraintTop_toBottomOf="@+id/filterLayout"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/card2"
+        android:layout_marginRight="30dp"
         android:layout_marginTop="30dp"
         android:layout_marginLeft="30dp"
         android:id="@+id/card1"
@@ -190,6 +197,9 @@
         android:layout_height="200dp"
         app:layout_constraintTop_toBottomOf="@+id/card1"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/Edit"
+        android:layout_marginRight="30dp"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="30dp"
         android:id="@+id/card2"
@@ -236,6 +246,7 @@
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="15dp"
         android:background="@drawable/plluss"
+        android:id="@+id/Edit"
         />
 
 
