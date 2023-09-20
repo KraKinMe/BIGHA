@@ -23,4 +23,26 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="Rental_plat">Rental Platform</string>
+    <string name="Your_Rentals">YOUR RENTALS</string>
+    <string name="microfinances">MicroFinances</string>
+    <string name="go_to_micro_finances">Go to Micro Finances</string>
+    <string name="know_more">Know More</string>
+    <string name="rent_equipments">Rent Equipments</string>
+    <string name="modernizing_farm_equipment_access">Modernizing Farm Equipment Access</string>
+    <string name="find_tools_nearby">Find Tools Nearby</string>
+    <string name="disease_detection">Disease Detection</string>
+    <string name="get_diagnosis_and_cure">Get Diagnosis and cure</string>
+    <string name="detect_diseases">Detect Diseases</string>
+    <string name="outbreaks_nearby">Outbreaks Nearby</string>
+    <string name="agrotourism">AgroTourism</string>
+    <string name="diversify_your_income">Diversify your income</string>
+    <string name="agro_tourism_profile">Agro-tourism Profile</string>
+    <string name="filter">Filter</string>
+    <string name="nearby_machinery">Nearby Machinery</string>
+    <string name="nearby_livestock">Nearby LiveStock</string>
+    <string name="a_z_a_z_0_9">a-z/A-Z/0-9</string>
+    <string name="same_as_above">Same as above</string>
+    <string name="your_name_eg_parth">YOUR NAME (Eg:- Parth)</string>
+    <string name="your_mob_no">YOUR MOB NO.</string>
+    <string name="search">Search.....</string>
 </resources>
