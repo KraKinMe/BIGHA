@@ -28,7 +28,7 @@
     android:textColor="@color/white"
     android:text="BIGHA"
     android:textAlignment="center"
-    android:layout_marginLeft="120dp"
+    app:layout_constraintRight_toRightOf="parent"
     android:textSize="30dp"
     android:fontFamily="sans-serif-condensed"
         >

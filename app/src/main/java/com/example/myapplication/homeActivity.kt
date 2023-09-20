@@ -33,4 +33,8 @@ class homeActivity : AppCompatActivity() {
         if(toggle.onOptionsItemSelected(item)) return true
         return super.onOptionsItemSelected(item)
     }
+    fun RedirectRent(view: View){
+        startActivity(Intent(this,RentActivity::class.java))
+        finish()
+    }
 }
