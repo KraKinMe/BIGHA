@@ -47,7 +47,6 @@ class homeActivity : AppCompatActivity() {
             val FExplain:String?="Farmers can Rent out as well as Take others items on Rent"
             showCustomDialogBox(FName,FExplain)
         }
-
     }
 
     private fun showCustomDialogBox(FName: String?,FExplain:String?) {
