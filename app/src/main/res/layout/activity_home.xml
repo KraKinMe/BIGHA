@@ -52,7 +52,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:text="MicroFinances "
+                    android:text="@string/microfinances"
                     android:textSize="30dp"
                     android:textColor="@color/Iris"
                     android:layout_gravity="center"
@@ -70,10 +70,12 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
                     android:text="@string/MicroFinanceTxt" />
+
+                <!--                //NO VALUE (REMOVABLE) -->
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Go to Micro Finances"
+                    android:text="@string/go_to_micro_finances"
                     android:textColor="@color/black"
                     android:backgroundTint="@color/LightGrey"
                     android:layout_marginTop="30dp"
@@ -83,7 +85,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Know More"
+                    android:text="@string/know_more"
                     android:textColor="@color/black"
                     android:layout_marginTop="30dp"
                     android:backgroundTint="@color/LightGrey"
@@ -101,7 +103,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Rent Equipments"
+                    android:text="@string/rent_equipments"
                     android:layout_gravity="center"
                     android:textSize="30dp"
                     android:textColor="@color/Iris"
@@ -111,7 +113,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Modernizing Farm Equipment Access"
+                    android:text="@string/modernizing_farm_equipment_access"
                     android:layout_gravity="center"
                     android:textStyle="bold"
                     android:textSize="20dp"
@@ -120,7 +122,7 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Find Tools Nearby"
+                    android:text="@string/find_tools_nearby"
                     android:id="@+id/Tool_button"
                     android:onClick="RedirectRent"
                     android:layout_marginTop="30dp"
@@ -128,7 +130,7 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Know More"
+                    android:text="@string/know_more"
                     android:layout_marginTop="30dp"
                     />
             </LinearLayout>
@@ -145,7 +147,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Disease Detection"
+                    android:text="@string/disease_detection"
                     android:layout_gravity="center"
                     android:textSize="30dp"
                     android:textStyle="bold"
@@ -154,7 +156,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Get Diagnosis and cure"
+                    android:text="@string/get_diagnosis_and_cure"
                     android:layout_gravity="center"
                     android:fontFamily="sans-serif-condensed"
                     android:textSize="20dp"
@@ -164,7 +166,7 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Detect Diseases"
+                    android:text="@string/detect_diseases"
                     android:backgroundTint="@color/LightBlack"
                     android:layout_marginTop="65dp"
                     android:layout_marginBottom="30dp"
@@ -175,7 +177,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/LightBlack"
-                    android:text="Outbreaks Nearby"
+                    android:text="@string/outbreaks_nearby"
                     android:layout_marginLeft="10dp"
                     >
 
@@ -195,7 +197,7 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="AgroTourism"
+                    android:text="@string/agrotourism"
                     android:textSize="30dp"
                     android:textStyle="bold"
                     android:layout_gravity="center"
@@ -207,14 +209,14 @@
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
                     android:textStyle="bold"
-                    android:text="Diversify your income"
+                    android:text="@string/diversify_your_income"
                     android:layout_gravity="center"
                     android:fontFamily="sans-serif-condensed"
                     />
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Agro-tourism Profile"
+                    android:text="@string/agro_tourism_profile"
                     android:layout_marginLeft="4dp"
                     android:layout_marginTop="40dp"
                     android:backgroundTint="@color/alagBlue"

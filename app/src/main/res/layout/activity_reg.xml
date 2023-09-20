@@ -65,17 +65,18 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Name"
+                android:text="@string/name"
                 android:alpha="0.7"
                 android:textStyle="bold"/>
 
+            <!--            HINTS TO BE THOUGHT HOW TO BE REASSIGNED FOR CHANGE IN LANG.-->
             <EditText
                 android:id="@+id/nameEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="ex-'parth'"
+                android:hint="@string/your_name_eg_parth"
                 android:inputType="textPersonName"
-                 />
+                />
 
 
             <View
@@ -92,7 +93,7 @@
                 android:id="@+id/MobileEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="707812XXXX"
+                android:hint="@string/your_mob_no"
                 android:inputType="text|phone" />
 
             <View
@@ -109,7 +110,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
-                android:hint="a-z/A-Z/0-9"
+                android:hint="@string/a_z_a_z_0_9"
                 android:drawableEnd="@drawable/password_eye"/>
 
             <View
@@ -125,7 +126,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
-                android:hint="Same as above"
+                android:hint="@string/same_as_above"
                 android:drawableEnd="@drawable/password_eye"/>
 
             <RelativeLayout
