@@ -22,22 +22,40 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             >
+
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:id="@+id/HomeDiv1"
-                app:layout_constraintTop_toBottomOf="parent"
-                android:background="@color/Tan"
-                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="321dp"
+                android:background="@drawable/app_back"
                 android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="parent"
                 tools:ignore="UnknownId">
-                <ImageView
+
+
+                <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="300dp"
-                    android:src="@drawable/app_back"
-                    android:layout_marginTop="-20dp"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:layout_height="wrap_content"
+                    android:text="OUR MISSION"
+                    android:textSize="40dp"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"/>
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="50dp"
+                    android:background="@color/black"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="91dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="'Mitti se ...Mitti ke liye...'"
+                    android:textSize="25dp"
+                    android:textStyle="bold"/>
                 <!-- Add more content to HomeDiv1 if needed -->
             </LinearLayout>
             <LinearLayout
@@ -48,15 +66,17 @@
                 android:background="@drawable/micro_finance_image"
                 android:orientation="vertical"
                 android:layout_marginTop="-15dp">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginTop="15dp"
                     android:text="@string/microfinances"
-                    android:textSize="30dp"
                     android:textColor="@color/Iris"
-                    android:layout_gravity="center"
+                    android:textSize="30dp"
                     android:textStyle="bold" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
