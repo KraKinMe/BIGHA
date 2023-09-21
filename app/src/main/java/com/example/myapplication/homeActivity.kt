@@ -77,7 +77,7 @@ class homeActivity : AppCompatActivity() {
     }
     fun RedirectRent(view: View){
         startActivity(Intent(this,RentActivity::class.java))
-        finish()
+
     }
     fun RedirectAgro(view: View){
         startActivity(Intent(this,agrotourismActivity::class.java))

@@ -32,7 +32,7 @@ class signUpActivity : AppCompatActivity() {
     }
     fun onRegisterNowClicked(view: View) {
         startActivity(Intent(this,regActivity::class.java))
-        finish()
+
     }
 
     fun onhomepage(){
