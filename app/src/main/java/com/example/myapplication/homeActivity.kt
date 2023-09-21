@@ -32,12 +32,14 @@ class homeActivity : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
+
+        //KNOW MORE BUTTONS
         val btnKnowMoreMicroFin : Button = findViewById(R.id.btnKnowMoreMicroFin)
 
         btnKnowMoreMicroFin.setOnClickListener {
             val FName:String?="MICRO FINANCE"
             val FExplain:String?="Here Farmers can do Stock level shit (Baadme Explain karna)"
-            showCustomDialogBox(FName,FExplain)
+            showCustomDialogBox1(FName,FExplain)
         }
 
         val btnKnowMoreRent : Button = findViewById(R.id.btnKnowMoreRent)
@@ -45,11 +47,22 @@ class homeActivity : AppCompatActivity() {
         btnKnowMoreRent.setOnClickListener {
             val FName:String?="Rental Platform"
             val FExplain:String?="Farmers can Rent out as well as Take others items on Rent"
-            showCustomDialogBox(FName,FExplain)
+            showCustomDialogBox1(FName,FExplain)
+        }
+
+
+        //QUESTION ASKING BUTTONS
+
+        val btnGoTOKN : Button = findViewById(R.id.btnGoToKN)
+
+        btnGoTOKN.setOnClickListener {
+            val Question:String?="DO YOU WANT INVESTMENT OR WANT TO INVEST?"
+
+            showCustomDialogBox2(Question)
         }
     }
 
-    private fun showCustomDialogBox(FName: String?,FExplain:String?) {
+    private fun showCustomDialogBox1(FName: String?,FExplain:String?) {
         val dialog = Dialog(this)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog.setCancelable(false)
@@ -71,6 +84,30 @@ class homeActivity : AppCompatActivity() {
 
     }
 
+    private fun showCustomDialogBox2(Ques: String?) {
+        val dialog = Dialog(this)
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog.setCancelable(false)
+        dialog.setContentView(R.layout.layout_ques)
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+
+        val Question : TextView =dialog.findViewById(R.id.question)
+        val opt_1 : Button = dialog.findViewById(R.id.opt_1)
+        val opt_2 : Button = dialog.findViewById(R.id.opt_2)
+
+        Question.text=Ques
+
+        opt_1.setOnClickListener {
+            dialog.dismiss()
+        }
+        opt_2.setOnClickListener {
+            dialog.dismiss()
+        }
+
+        dialog.show()
+
+    }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if(toggle.onOptionsItemSelected(item)) return true
         return super.onOptionsItemSelected(item)
@@ -82,7 +119,5 @@ class homeActivity : AppCompatActivity() {
     fun RedirectAgro(view: View){
         startActivity(Intent(this,agrotourismActivity::class.java))
     }
-    fun RedirectFinances(view: View){
-        startActivity((Intent(this,microfinancesActivity::class.java)))
-    }
+
 }
