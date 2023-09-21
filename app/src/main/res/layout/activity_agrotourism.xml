@@ -112,7 +112,7 @@
 
             <ImageView
                 android:layout_width="66dp"
-                android:layout_height="31dp"
+                android:layout_height="30dp"
                 android:layout_marginTop="20dp"
                 android:src="@drawable/filter"
                 app:layout_constraintRight_toLeftOf="@+id/FilterText_Agro"
@@ -151,16 +151,16 @@
         android:layout_marginLeft="30dp"
         android:id="@+id/card1_Agro"
         >
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-condensed"
             android:text="Nearby Tourist Spots"
             android:textAlignment="center"
-            android:textStyle="bold"
-            android:layout_marginTop="20dp"
             android:textSize="25dp"
-            android:fontFamily="sans-serif-condensed"
-            />
+            android:textStyle="bold" />
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
