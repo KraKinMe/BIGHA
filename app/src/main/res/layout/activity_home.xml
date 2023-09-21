@@ -73,13 +73,14 @@
 
                 <!--                //NO VALUE (REMOVABLE) -->
                 <Button
+                    android:id="@+id/btnGoToKN"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/go_to_micro_finances"
                     android:textColor="@color/black"
                     android:backgroundTint="@color/LightGrey"
                     android:layout_marginTop="30dp"
-                    android:id="@+id/Tool_button2"
+
                     android:onClick="RedirectFinances"
                     android:alpha="0.8" />
                 <Button

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="20dp"
+    android:layout_marginHorizontal="20dp">
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+        <TextView
+            android:textSize="18sp"
+            android:textColor="@color/green"
+            android:textStyle="bold"
+            android:text="@string/app_name"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="QUESTION"
+            android:gravity="center"
+            android:id="@+id/question"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/opt_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FARMER"
+                android:textSize="14sp"
+                android:layout_marginRight="10sp"/>
+
+            <Button
+                android:id="@+id/opt_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="INVESTOR"
+                android:textSize="14sp"
+                android:layout_marginLeft="10sp"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
