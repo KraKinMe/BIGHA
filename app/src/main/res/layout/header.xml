@@ -12,7 +12,7 @@
         android:id="@+id/logo"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/baseline_person_24"
+        android:src="@drawable/app_logo"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
