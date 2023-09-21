@@ -88,7 +88,8 @@ class homeActivity : AppCompatActivity() {
         val dialog = Dialog(this)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog.setCancelable(false)
-        dialog.setContentView(R.layout.layout_ques)
+        dialog.setContentView(R.layout.activity_layout_ques)
+
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
 
         val Question : TextView =dialog.findViewById(R.id.question)
@@ -98,9 +99,12 @@ class homeActivity : AppCompatActivity() {
         Question.text=Ques
 
         opt_1.setOnClickListener {
+
+            startActivity(Intent(this,microfinancesActivity::class.java))
             dialog.dismiss()
         }
         opt_2.setOnClickListener {
+
             dialog.dismiss()
         }
 
@@ -119,5 +123,6 @@ class homeActivity : AppCompatActivity() {
     fun RedirectAgro(view: View){
         startActivity(Intent(this,agrotourismActivity::class.java))
     }
+
 
 }
