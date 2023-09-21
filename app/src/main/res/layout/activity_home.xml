@@ -79,7 +79,8 @@
                     android:textColor="@color/black"
                     android:backgroundTint="@color/LightGrey"
                     android:layout_marginTop="30dp"
-
+                    android:id="@+id/Tool_button2"
+                    android:onClick="RedirectFinances"
                     android:alpha="0.8" />
                 <Button
                     android:id="@+id/btnKnowMoreMicroFin"

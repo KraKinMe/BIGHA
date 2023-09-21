@@ -81,7 +81,8 @@ class homeActivity : AppCompatActivity() {
     }
     fun RedirectAgro(view: View){
         startActivity(Intent(this,agrotourismActivity::class.java))
-        finish()
-
+    }
+    fun RedirectFinances(view: View){
+        startActivity((Intent(this,microfinancesActivity::class.java)))
     }
 }
