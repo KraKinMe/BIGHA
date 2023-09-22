@@ -6,26 +6,22 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 class signUpActivity : AppCompatActivity() {
     private lateinit var Email: EditText
     private lateinit var Password:EditText
     private lateinit var submit: Button
+    private lateinit var database: DatabaseReference
 
-    var email= arrayOf("2004","2003","2002")
-    var pass = arrayOf("2004","2003","2002")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
         supportActionBar?.hide()
         submit = findViewById(R.id.submitlogin)
-        val intent=intent
-        val p=intent.getStringExtra("P")
-        val n=intent.getStringExtra("N")
-        if(p!=null&&n!=null){
-            email=email+n
-            pass=pass+p
-        }
+
         submit.setOnClickListener{
             onhomepage()
         }
@@ -41,18 +37,27 @@ class signUpActivity : AppCompatActivity() {
         val user = Email.text.toString()
         val pas =  Password.text.toString()
         var allow = false
-        var index=0
-        for (x in email){
-            if(x==user && pass[index]==pas){
-                allow=true
+        database=FirebaseDatabase.getInstance().getReference("Users")
+        database.child(user).get().addOnSuccessListener {
+            if(it.exists()){
+                val StoredPass=it.child("password").value
+                if(pas.equals(StoredPass)){
+                    allow=true
+                    startActivity(Intent(this,homeActivity::class.java))
+                    finish()
+                    /// Get function is asynchronous , dont change anything here
+                     }else{
+                    Toast.makeText(this,pas+" "+StoredPass,Toast.LENGTH_SHORT).show()
+
+                }
             }
-            index++
+        }.addOnCanceledListener {
+            Toast.makeText(this,"Network Error",Toast.LENGTH_SHORT).show()
         }
-        if(allow){
+        if(allow==true){
             startActivity(Intent(this,homeActivity::class.java))
             finish()
-        }
-        else{
+        }else{
             Email.text.clear()
             Password.text.clear()
         }

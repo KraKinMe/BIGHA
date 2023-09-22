@@ -10,7 +10,7 @@ import android.widget.AutoCompleteTextView
 
 import android.widget.Toast
 
-class microfinancesActivity : AppCompatActivity() {
+class  microfinancesActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
