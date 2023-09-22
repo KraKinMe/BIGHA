@@ -47,7 +47,7 @@ class signUpActivity : AppCompatActivity() {
                     finish()
                     /// Get function is asynchronous , dont change anything here
                      }else{
-                    Toast.makeText(this,pas+" "+StoredPass,Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this,"Wrong Password / Username",Toast.LENGTH_SHORT).show()
 
                 }
             }
