@@ -141,28 +141,6 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Investment"
-                android:textSize="20sp"
-                android:layout_marginLeft="10sp"
-                android:textStyle="bold"
-                android:alpha="0.7"/>
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10sp"
-                android:layout_marginRight="40sp"
-                android:hint="Price For Dne Stock"
-                android:inputType="textPersonName"
-                android:id="@+id/Locationtool1"/>
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="10dp"/>
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="10dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="M.S.P"
                 android:textSize="20sp"
                 android:layout_marginLeft="10sp"
@@ -176,6 +154,30 @@
                 android:hint="Price Now a Days"
                 android:inputType="textPersonName"
                 android:id="@+id/Locationtool"/>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Investment"
+                android:textSize="20sp"
+                android:layout_marginLeft="10sp"
+                android:textStyle="bold"
+                android:alpha="0.7"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="40sp"
+                android:hint="Price/kg"
+                android:inputType="textPersonName"
+                android:id="@+id/Locationtool1"/>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"/>
+
+
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
