@@ -11,26 +11,51 @@ import android.view.View
 import android.view.Window
 import android.widget.Button
 import android.widget.TextView
+import java.util.Locale
+import android.content.Context
+import android.content.res.Configuration
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 import java.lang.ProcessBuilder.Redirect
+import android.util.Log
+
 
 class homeActivity : AppCompatActivity() {
+
     lateinit var toggle: ActionBarDrawerToggle
+    private lateinit var drawerLayout: DrawerLayout
+    private lateinit var navView: NavigationView
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val change=intent.getStringExtra("key_name")
+
+        if(change!=null){
+            val cur=getCurrentLocaleLanguage(this)
+            if(cur=="en") {
+                val hindiLocale = Locale("hi")
+                Locale.setDefault(hindiLocale)
+
+                val config = Configuration()
+                config.locale = hindiLocale
+                resources.updateConfiguration(config, resources.displayMetrics)
+            }else{
+                val hindiLocale = Locale("en")
+                Locale.setDefault(hindiLocale)
+
+                val config = Configuration()
+                config.locale = hindiLocale
+                resources.updateConfiguration(config, resources.displayMetrics)
+            }
+        }
+
         setContentView(R.layout.activity_home)
         window.statusBarColor = Color.rgb(0,0,0)
-        val drawerLayout:DrawerLayout = findViewById(R.id.drawer)
-        val navView:NavigationView = findViewById(R.id.nav_view)
-
-        toggle= ActionBarDrawerToggle(this,drawerLayout,R.string.open,R.string.close)
-        drawerLayout.addDrawerListener(toggle)
-        toggle.syncState()
-
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
 
         //KNOW MORE BUTTONS
@@ -60,8 +85,38 @@ class homeActivity : AppCompatActivity() {
 
             showCustomDialogBox2(Question)
         }
-    }
+        drawerLayout = findViewById(R.id.drawer)
+        navView= findViewById(R.id.nav_view)
+        toggle= ActionBarDrawerToggle(this,drawerLayout,R.string.open,R.string.close)
+        drawerLayout.addDrawerListener(toggle)
+        toggle.syncState()
 
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        navView.setNavigationItemSelectedListener {
+            Log.d("Ghusa","ha")
+            when(it.itemId){
+                R.id.Setting -> {
+                    Log.d("MenuItemClick", "Setting menu item clicked")
+                    Toast.makeText(this, "Clickkk", Toast.LENGTH_SHORT).show()
+                }
+                R.id.ChangeLang ->{
+                    RedirectHome(navView)
+                }
+            }
+            true
+        }
+
+    }
+    fun getCurrentLocaleLanguage(context: Context): String {
+        val resources = context.resources
+        val configuration: Configuration = resources.configuration
+        val locale: Locale = if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+            configuration.locales[0]
+        } else {
+            configuration.locale
+        }
+        return locale.language // Returns the current language code (e.g., "en" for English)
+    }
     private fun showCustomDialogBox1(FName: String?,FExplain:String?) {
         val dialog = Dialog(this)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
@@ -124,5 +179,9 @@ class homeActivity : AppCompatActivity() {
         startActivity(Intent(this,agrotourismActivity::class.java))
     }
 
-
+    fun RedirectHome(view: View){
+        val intent = Intent(this, homeActivity::class.java)
+        intent.putExtra("key_name", "Hello from MainActivity!")
+        startActivity(intent)
+    }
 }
