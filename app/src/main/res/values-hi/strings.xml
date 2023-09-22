@@ -46,4 +46,31 @@
     <string name="your_mob_no">आपका मोबाइल नंबर</string>
     <string name="search">खोजें...</string>
     <string name="back">वापस जाएँ</string>
+
+    <!--addforrent.xml=13-->
+    <string name="add_for_rent">किराये पर दें</string>
+    <string name="tool_information">उपकरण विवरण</string>
+    <string name="image_of_product">उत्पाद का चित्र</string>
+    <string name="select_image">चित्र चुनें</string>
+    <string name="tool_name">उपकरण का नाम</string>
+    <string name="enter_your_tool_name">उपकरण का नाम दर्ज करें</string>
+    <string name="description">विवरण</string>
+    <string name="quality_modal_age_condition">स्थिति एवं गुणवत्ता</string>
+    <string name="pricing">कीमत</string>
+    <string name="rate_per_day_hour">प्रति दिन का किराया</string>
+    <string name="location">स्थान</string>
+    <string name="enter_your_location">अपना स्थान दर्ज़ करें</string>
+    <string name="submit">जमा करें</string>
+
+    <!--agrotourism.xml-->
+    <string name="agro_tourism">कृषिपर्यटन</string>
+    <string name="your_customers">आपके ग्राहक</string>
+    <string name="nearby_tourist_spots">पास के कृषि पर्यटन स्थल</string>
+    <string name="destination_details">स्थान विवरण</string>
+
+    <string name="machinery_description">मशीनरी विवरण</string>
+    <string name="multiline_description"> विवरण</string>
+
+
+
 </resources>

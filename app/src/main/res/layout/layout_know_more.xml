@@ -6,7 +6,7 @@
     app:cardBackgroundColor="@color/white"
     app:cardCornerRadius="20dp"
     android:layout_marginHorizontal="20dp">
-    
+
     <LinearLayout
         android:gravity="center"
         android:orientation="vertical"
@@ -35,7 +35,7 @@
             />
 
         <TextView
-            android:text="Feature Explain in many line this is a demo to make sure it is going in multiple line as needed..."
+            android:text="@string/multiline_description"
             android:gravity="center"
             android:id="@+id/FeatureExplain"
             android:textSize="16sp"
@@ -62,5 +62,5 @@
 
 
     </LinearLayout>
-    
+
 </androidx.cardview.widget.CardView>

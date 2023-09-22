@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginRight="130dp"
-            android:text="Add For Rent"
+            android:text="@string/add_for_rent"
             android:textStyle="bold"
             android:textAlignment="center"
             android:textSize="20dp"
@@ -61,22 +61,22 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tool Information"
-            android:textColor="@color/my_primary"
-            android:textStyle="bold"
-            android:textSize="25sp"
-            android:layout_marginTop="5sp"
-            android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tool_information"
+                android:textColor="@color/my_primary"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:layout_marginTop="5sp"
+                android:layout_gravity="center"/>
             <View
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Image of Product"
+                android:text="@string/image_of_product"
                 android:textStyle="bold"
                 android:layout_gravity="center"
                 android:textSize="20dp"
@@ -98,7 +98,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/selectImageButton"
-                android:text="Select Image"
+                android:text="@string/select_image"
 
                 android:layout_gravity="center"
                 android:textStyle="bold"
@@ -111,7 +111,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tool Name"
+                android:text="@string/tool_name"
                 android:alpha="0.7"
                 android:layout_marginLeft="10sp"
                 android:textStyle="bold"
@@ -119,7 +119,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter your Tool name"
+                android:hint="@string/enter_your_tool_name"
                 android:layout_marginLeft="10sp"
                 android:layout_marginRight="40sp"
                 android:inputType="textPersonName"
@@ -130,7 +130,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Description"
+                android:text="@string/description"
                 android:textSize="20sp"
                 android:layout_marginLeft="10sp"
                 android:textStyle="bold"
@@ -140,7 +140,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10sp"
                 android:layout_marginRight="40sp"
-                android:hint="Quality/Modal/Age/Condition"
+                android:hint="@string/quality_modal_age_condition"
                 android:inputType="textPersonName"
                 android:id="@+id/Descoftool"/>
             <View
@@ -149,7 +149,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pricing"
+                android:text="@string/pricing"
                 android:textSize="20sp"
                 android:layout_marginLeft="10sp"
                 android:textStyle="bold"
@@ -159,26 +159,26 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10sp"
                 android:layout_marginRight="40sp"
-                android:hint="Rate Per Day/Hour"
+                android:hint="@string/rate_per_day_hour"
                 android:inputType="textPersonName"
                 android:id="@+id/priceoftool"/>
             <View
                 android:layout_width="wrap_content"
                 android:layout_height="10dp"/>
             <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Location"
-            android:textSize="20sp"
-            android:layout_marginLeft="10sp"
-            android:textStyle="bold"
-            android:alpha="0.7"/>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/location"
+                android:textSize="20sp"
+                android:layout_marginLeft="10sp"
+                android:textStyle="bold"
+                android:alpha="0.7"/>
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10sp"
                 android:layout_marginRight="40sp"
-                android:hint="Enter your Location"
+                android:hint="@string/enter_your_location"
                 android:inputType="textPersonName"
                 android:id="@+id/Locationtool"/>
             <View
@@ -188,7 +188,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Submit"
+                android:text="@string/submit"
                 android:backgroundTint="#BCD9E6"
                 android:textColor="@color/black"
                 android:textStyle="bold"
