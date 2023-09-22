@@ -186,7 +186,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="100dp"
             android:layout_marginLeft="30dp"
-            android:text="How are you doing i am doing good\n it is good you are doing good good\n hahahahahhaahahah"
+            android:text="@string/machinery_description"
             >
 
         </TextView>

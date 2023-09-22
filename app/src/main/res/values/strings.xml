@@ -46,4 +46,32 @@
     <string name="your_mob_no">YOUR MOB NO.</string>
     <string name="search">Search.....</string>
     <string name="back">Back</string>
+
+    <!--NEW TEXTS addforrent.xml=13-->
+    <string name="add_for_rent">Add For Rent</string>
+    <string name="tool_information">Tool Information</string>
+    <string name="image_of_product">Image of Product</string>
+    <string name="select_image">Select Image</string>
+    <string name="tool_name">Tool Name</string>
+    <string name="enter_your_tool_name">Enter your Tool name</string>
+    <string name="description">Description</string>
+    <string name="quality_modal_age_condition">Quality/Model/Age/Condition</string>
+    <string name="pricing">Pricing</string>
+    <string name="rate_per_day_hour">Rate Per Day/Hour</string>
+    <string name="location">Location</string>
+    <string name="enter_your_location">Enter your Location</string>
+    <string name="submit">Submit</string>
+
+    <!--agrotourism.xml-->
+
+    <string name="agro_tourism">Agro Tourism</string>
+    <string name="your_customers">Your Customers</string>
+    <string name="nearby_tourist_spots">Nearby Tourist Spots</string>
+    <string name="destination_details">Destination Details</string>
+
+    <!--rent.xml-->
+    <string name="machinery_description">Machinery Description</string>
+    <string name="multiline_description">Multiline description</string>
+
+
 </resources>
