@@ -37,21 +37,22 @@ class homeActivity : AppCompatActivity() {
 
         if(change!=null){
             val cur=getCurrentLocaleLanguage(this)
-            if(cur=="en") {
+            if (cur == "en") {
                 val hindiLocale = Locale("hi")
                 Locale.setDefault(hindiLocale)
 
                 val config = Configuration()
                 config.locale = hindiLocale
                 resources.updateConfiguration(config, resources.displayMetrics)
-            }else{
-                val hindiLocale = Locale("en")
-                Locale.setDefault(hindiLocale)
+            } else {
+                val englishLocale = Locale("en")
+                Locale.setDefault(englishLocale)
 
                 val config = Configuration()
-                config.locale = hindiLocale
+                config.locale = englishLocale
                 resources.updateConfiguration(config, resources.displayMetrics)
             }
+
         }
 
         setContentView(R.layout.activity_home)
