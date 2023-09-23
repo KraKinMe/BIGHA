@@ -185,4 +185,9 @@ class homeActivity : AppCompatActivity() {
         intent.putExtra("key_name", "Hello from MainActivity!")
         startActivity(intent)
     }
+    fun RedirectDisease(view: View){
+        val intent = Intent(this, detectionActivity::class.java)
+        intent.putExtra("key_name", "Hello from MainActivity!")
+        startActivity(intent)
+    }
 }
