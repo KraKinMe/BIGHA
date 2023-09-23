@@ -197,13 +197,9 @@
                     android:backgroundTint="@color/LightBlack"
                     android:text="@string/outbreaks_nearby"
                     android:layout_marginLeft="10dp"
-                    android:onClick="RedirectOutbreaks"
-                    >
-
+                    android:onClick="RedirectOutbreaks">
                 </Button>
             </LinearLayout>
-
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
