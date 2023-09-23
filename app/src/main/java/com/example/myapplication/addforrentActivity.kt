@@ -51,7 +51,7 @@ class addforrentActivity : AppCompatActivity() {
         Price = findViewById(R.id.priceoftool)
         Location = findViewById(R.id.Locationtool)
         submit.setOnClickListener {
-            Toast.makeText(this,"NOOB",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"Sending ...",Toast.LENGTH_SHORT).show()
             val descTxt=Desc.text.toString()
             val nameTxt=Name.text.toString()
             var priceTxt=Price.text.toString()
