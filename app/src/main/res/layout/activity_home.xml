@@ -146,7 +146,7 @@
 
                 <!--                //NO VALUE (REMOVABLE) -->
                 <Button
-                    android:id="@+id/btnGoMarket"
+                    android:id="@+id/btnGoToMP"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Go to Market place"
@@ -154,7 +154,7 @@
                     android:backgroundTint="@color/LightGrey"
                     android:layout_marginTop="30dp"
                     android:layout_marginLeft="10dp"
-                    android:onClick="btnGoToKN"
+                    android:onClick="btnGoToMP"
                     android:alpha="0.8" />
                 <Button
                     android:id="@+id/btnKnowMoremarket"

@@ -1,20 +1,16 @@
 package com.example.myapplication
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
-
 import android.widget.Toast
 
-class  microfinancesActivity : AppCompatActivity() {
-
+class mpsellActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_microfinances)
+        setContentView(R.layout.activity_mpsell)
         supportActionBar?.hide()
 
 
@@ -30,21 +26,14 @@ class  microfinancesActivity : AppCompatActivity() {
             "Mustard",
             "Onion"
         )
-        val autoComplete: AutoCompleteTextView = findViewById(R.id.auto_Complete)
+        val SellCropName: AutoCompleteTextView = findViewById(R.id.SellCropName)
         val adapter = ArrayAdapter(this, R.layout.list_dropdown, items)
-        autoComplete.setAdapter(adapter)
+        SellCropName.setAdapter(adapter)
 
-        autoComplete.onItemClickListener =
+        SellCropName.onItemClickListener =
             AdapterView.OnItemClickListener { adapterView, view_, i, l ->
                 val itemSelected = adapterView.getItemAtPosition(i)
                 Toast.makeText(this, " Item : $itemSelected", Toast.LENGTH_SHORT).show()
             }
-
-
     }
-        fun previous(view: View) {
-            startActivity(Intent(this, homeActivity::class.java))
-            finish()
-        }
-
 }
