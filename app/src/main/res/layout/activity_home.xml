@@ -56,7 +56,7 @@
                 android:layout_width="match_parent"
                 android:id="@+id/HomeDiv2"
                 app:layout_constraintTop_toBottomOf="@+id/HomeDiv1"
-                android:background="@drawable/micro_finance_image"
+                android:background="@drawable/micro"
                 android:orientation="vertical"
                 android:layout_marginTop="-15dp">
 
@@ -66,7 +66,7 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="15dp"
                     android:text="@string/microfinances"
-                    android:textColor="@color/Iris"
+                    android:textColor="@color/black"
                     android:textSize="30dp"
                     android:textStyle="bold" />
 
@@ -77,6 +77,7 @@
                     android:layout_gravity="center"
                     android:textSize="20dp"
                     android:textStyle="bold"
+                    android:textColor="@color/black"
                     android:fontFamily="sans-serif-condensed" />
                 <TextView
                     android:layout_width="wrap_content"
@@ -93,7 +94,7 @@
                     android:textColor="@color/black"
                     android:backgroundTint="@color/LightGrey"
                     android:layout_marginTop="30dp"
-
+                    android:layout_marginLeft="10dp"
                     android:onClick="btnGoToKN"
                     android:alpha="0.8" />
                 <Button
@@ -104,15 +105,76 @@
                     android:text="@string/know_more"
                     android:textColor="@color/black"
                     android:layout_marginTop="30dp"
+
                     android:backgroundTint="@color/LightGrey"
                     android:alpha="0.8" />
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="300dp"
+                android:layout_width="match_parent"
+                android:id="@+id/HomeDiv0"
+                app:layout_constraintTop_toBottomOf="@+id/HomeDiv1"
+                android:background="@drawable/market1"
+                android:orientation="vertical"
+                android:layout_marginTop="-15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:text="Market Place"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No more Middle Men"
+                    android:layout_gravity="center"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-condensed" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="@string/MicroFinanceTxt" />
+
+                <!--                //NO VALUE (REMOVABLE) -->
+                <Button
+                    android:id="@+id/btnGoMarket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Go to Market place"
+                    android:textColor="@color/black"
+                    android:backgroundTint="@color/LightGrey"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:onClick="btnGoToKN"
+                    android:alpha="0.8" />
+                <Button
+                    android:id="@+id/btnKnowMoremarket"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/know_more"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="30dp"
+                    android:backgroundTint="@color/LightGrey"
+                    android:alpha="0.8" />
+            </LinearLayout>
+
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="300dp"
                 app:layout_constraintTop_toBottomOf="@id/HomeDiv2"
                 app:layout_constraintLeft_toLeftOf="parent"
-                android:background="@drawable/tract"
+                android:background="@drawable/rents"
                 android:orientation="vertical"
                 android:id="@+id/HomeDiv3"
                 >
@@ -122,7 +184,7 @@
                     android:text="@string/rent_equipments"
                     android:layout_gravity="center"
                     android:textSize="30dp"
-                    android:textColor="@color/Iris"
+                    android:textColor="@color/black"
                     android:textStyle="bold"
                     android:layout_marginTop="15dp"
                     />
@@ -132,6 +194,7 @@
                     android:text="@string/modernizing_farm_equipment_access"
                     android:layout_gravity="center"
                     android:textStyle="bold"
+                    android:textColor="@color/black"
                     android:textSize="20dp"
                     android:fontFamily="sans-serif-condensed"
                     />
@@ -142,12 +205,14 @@
                     android:id="@+id/Tool_button"
                     android:onClick="RedirectRent"
                     android:layout_marginTop="30dp"
+                    android:layout_marginLeft="10dp"
                     />
                 <Button
                     android:id="@+id/btnKnowMoreRent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/know_more"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginTop="30dp"
                     />
             </LinearLayout>
@@ -157,7 +222,7 @@
                 android:layout_height="300dp"
                 app:layout_constraintTop_toBottomOf="@+id/HomeDiv3"
                 app:layout_constraintLeft_toLeftOf="@+id/HomeDiv3"
-                android:background="@drawable/keede_bachao"
+                android:background="@drawable/dd"
                 android:orientation="vertical"
                 android:id="@+id/HomeDiv4"
                 >
@@ -168,7 +233,7 @@
                     android:layout_gravity="center"
                     android:textSize="30dp"
                     android:textStyle="bold"
-                    android:textColor="@color/Iris"
+                    android:textColor="@color/black"
                     />
                 <TextView
                     android:layout_width="wrap_content"
@@ -177,6 +242,7 @@
                     android:layout_gravity="center"
                     android:fontFamily="sans-serif-condensed"
                     android:textSize="20dp"
+                    android:textColor="@color/black"
                     android:textStyle="bold"
                     android:layout_marginBottom="20dp"
                     />
@@ -207,7 +273,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/HomeDiv4"
                 app:layout_constraintRight_toLeftOf="parent"
                 android:orientation="vertical"
-                android:background="@drawable/agro_tourism">
+                android:background="@drawable/tour">
                 <TextView
 
                     android:layout_width="wrap_content"
@@ -216,7 +282,7 @@
                     android:textSize="30dp"
                     android:textStyle="bold"
                     android:layout_gravity="center"
-                    android:textColor="@color/Iris"
+                    android:textColor="@color/black"
                     />
                 <TextView
 
@@ -226,6 +292,7 @@
                     android:textStyle="bold"
                     android:text="@string/diversify_your_income"
                     android:layout_gravity="center"
+                    android:textColor="@color/black"
                     android:fontFamily="sans-serif-condensed"
                     />
                 <Button
@@ -234,7 +301,7 @@
                     android:text="@string/agro_tourism_profile"
                     android:id="@+id/GotoAgro"
                     android:onClick="RedirectAgro"
-                    android:layout_marginLeft="4dp"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginTop="40dp"
                     android:backgroundTint="@color/alagBlue"
                     ></Button>
