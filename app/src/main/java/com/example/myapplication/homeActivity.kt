@@ -190,4 +190,11 @@ class homeActivity : AppCompatActivity() {
         intent.putExtra("key_name", "Hello from MainActivity!")
         startActivity(intent)
     }
+    fun RedirectOutbreaks(view: View){
+        val intent = Intent(this, OutBreaksActivity::class.java)
+        intent.putExtra("key_name", "Hello from MainActivity!")
+        startActivity(intent)
+    }
+
+
 }

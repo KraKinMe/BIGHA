@@ -197,6 +197,7 @@
                     android:backgroundTint="@color/LightBlack"
                     android:text="@string/outbreaks_nearby"
                     android:layout_marginLeft="10dp"
+                    android:onClick="RedirectOutbreaks"
                     >
 
                 </Button>
