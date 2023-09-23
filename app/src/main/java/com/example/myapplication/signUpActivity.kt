@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -43,6 +44,10 @@ class signUpActivity : AppCompatActivity() {
                 val StoredPass=it.child("password").value
                 if(pas.equals(StoredPass)){
                     allow=true
+                    val sharedPrefUserName = getSharedPreferences("my_prefs", Context.MODE_PRIVATE)
+                    val editor = sharedPrefUserName.edit()
+                    editor.putString("User",user)
+                    editor.apply()
                     startActivity(Intent(this,homeActivity::class.java))
                     finish()
                     /// Get function is asynchronous , dont change anything here

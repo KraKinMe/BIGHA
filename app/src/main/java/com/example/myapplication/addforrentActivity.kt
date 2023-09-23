@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
 import android.app.Activity
+import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.net.Uri
@@ -28,6 +29,8 @@ class addforrentActivity : AppCompatActivity() {
     private lateinit var ToolPic:ImageView
     private lateinit var submit:Button
     private lateinit var database: DatabaseReference
+    private lateinit var Price:EditText
+    private lateinit var Location:EditText
     var sImage:String? =""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,15 +48,21 @@ class addforrentActivity : AppCompatActivity() {
         Desc = findViewById(R.id.Descoftool)
         Name = findViewById(R.id.ToolName)
         submit = findViewById(R.id.submitBtn)
+        Price = findViewById(R.id.priceoftool)
+        Location = findViewById(R.id.Locationtool)
         submit.setOnClickListener {
             Toast.makeText(this,"NOOB",Toast.LENGTH_SHORT).show()
             val descTxt=Desc.text.toString()
             val nameTxt=Name.text.toString()
+            var priceTxt=Price.text.toString()
+            var locationTxt=Location.text.toString()
             database = FirebaseDatabase.getInstance().getReference("Machines")
-            val Machines=Machines(descTxt,sImage,nameTxt)
+            val Machines=Machines(descTxt,sImage,nameTxt,priceTxt,locationTxt)
+            val sharedPref=getSharedPreferences("my_prefs", Context.MODE_PRIVATE)
+            val savedUserName=sharedPref.getString("User","def")?:nameTxt
 
        //     Toast.makeText(this,"Agla toast",Toast.LENGTH_SHORT).show()
-            database.child(nameTxt).setValue(Machines).addOnSuccessListener {
+            database.child(savedUserName).setValue(Machines).addOnSuccessListener {
                     Toast.makeText(this,"Your tool is up for Rent",Toast.LENGTH_SHORT).show()
 
             }.addOnCanceledListener {
