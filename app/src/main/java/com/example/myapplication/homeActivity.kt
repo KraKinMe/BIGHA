@@ -90,6 +90,14 @@ class homeActivity : AppCompatActivity() {
 
             showCustomDialogBox2(Question)
         }
+
+        val btnGoToMP : Button = findViewById(R.id.btnGoToMP)
+
+        btnGoToMP.setOnClickListener {
+            val Question:String?="Who Are You ?"
+
+            showCustomDialogBox3(Question)
+        }
         drawerLayout = findViewById(R.id.drawer)
         navView= findViewById(R.id.nav_view)
         toggle= ActionBarDrawerToggle(this,drawerLayout,R.string.open,R.string.close)
@@ -191,6 +199,33 @@ class homeActivity : AppCompatActivity() {
                     dialog.dismiss()
                 }
             })
+        }
+        opt_2.setOnClickListener {
+
+            dialog.dismiss()
+        }
+
+        dialog.show()
+
+    }
+    private fun showCustomDialogBox3(Ques: String?) {
+        val dialog = Dialog(this)
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog.setCancelable(false)
+        dialog.setContentView(R.layout.activity_layout_ques)
+
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+
+        val Question : TextView =dialog.findViewById(R.id.question)
+        val opt_1 : Button = dialog.findViewById(R.id.opt_1)
+        val opt_2 : Button = dialog.findViewById(R.id.opt_2)
+
+        Question.text=Ques
+
+        opt_1.setOnClickListener {
+
+            startActivity(Intent(this,mpsellActivity::class.java))
+            dialog.dismiss()
         }
         opt_2.setOnClickListener {
 

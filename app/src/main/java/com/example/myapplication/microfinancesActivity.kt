@@ -19,22 +19,16 @@ class  microfinancesActivity : AppCompatActivity() {
 
 
         val items = listOf(
-            "Item 1",
-            "Item 2",
-            "Item 3",
-            "Item 4",
-            "item5",
-            "item6",
-            "Item 1",
-            "Item 2",
-            "Item 3",
-            "Item 4",
-            "item5",
-            "Item 1",
-            "Item 2",
-            "Item 3",
-            "Item 4",
-            "item5"
+            "Wheat",
+            "Millet",
+            "Rice",
+            "Cotton",
+            "SugarCane",
+            "GroundNut",
+            "Coffee",
+            "Potato",
+            "Mustard",
+            "Onion"
         )
         val autoComplete: AutoCompleteTextView = findViewById(R.id.auto_Complete)
         val adapter = ArrayAdapter(this, R.layout.list_dropdown, items)
