@@ -97,45 +97,7 @@
             <!--                android:hint="@string/your_mob_no"-->
             <!--                android:inputType="text|phone" />-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="ENTER FARM IMAGE"
-                android:textStyle="bold"
-                android:layout_gravity="center"
-                android:textSize="20dp"
-                android:alpha="0.7"
-                >
-            </TextView>
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="80dp"
-                android:scaleType="centerCrop"
-                android:id="@+id/farmImageView"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
 
-                android:src="@drawable/baseline_person_24"
-                >
-            </ImageView>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/selectImageButton"
-                android:text="@string/select_image"
-
-                android:layout_gravity="center"
-                android:textStyle="bold"
-                android:fontFamily="sans-serif-condensed"
-                android:textColor="@color/black"
-                android:backgroundTint="#BCD9E6"
-                >
-
-            </Button>
-
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

@@ -26,7 +26,6 @@ class addforrentActivity : AppCompatActivity() {
     private lateinit var selectImageButton: Button
     private lateinit var Desc:EditText
     private lateinit var Name:EditText
-    private lateinit var ToolPic:ImageView
     private lateinit var submit:Button
     private lateinit var database: DatabaseReference
     private lateinit var Price:EditText
@@ -57,7 +56,7 @@ class addforrentActivity : AppCompatActivity() {
             var priceTxt=Price.text.toString()
             var locationTxt=Location.text.toString()
             database = FirebaseDatabase.getInstance().getReference("Machines")
-            val Machines=Machines(descTxt,sImage,nameTxt,priceTxt,locationTxt)
+            val Machines=Machines(nameTxt,descTxt,sImage,priceTxt,locationTxt)
             val sharedPref=getSharedPreferences("my_prefs", Context.MODE_PRIVATE)
             val savedUserName=sharedPref.getString("User","def")?:nameTxt
 
