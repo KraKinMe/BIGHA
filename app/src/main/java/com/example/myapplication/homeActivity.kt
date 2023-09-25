@@ -20,14 +20,18 @@ import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 import java.lang.ProcessBuilder.Redirect
 import android.util.Log
-
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
 class homeActivity : AppCompatActivity() {
 
     lateinit var toggle: ActionBarDrawerToggle
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var navView: NavigationView
-
+    private lateinit var database: DatabaseReference
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -111,6 +115,9 @@ class homeActivity : AppCompatActivity() {
                 R.id.ChangeLang ->{
                     RedirectHome(navView)
                 }
+                R.id.LOGOUT ->{
+                    Redirectsignuppage(navView)
+                }
             }
             true
         }
@@ -163,9 +170,35 @@ class homeActivity : AppCompatActivity() {
         Question.text=Ques
 
         opt_1.setOnClickListener {
+            val sharedPref = getSharedPreferences("my_prefs", Context.MODE_PRIVATE)
+            val savedUserName = sharedPref.getString("User", "def") ?: "."
+            val database = FirebaseDatabase.getInstance().getReference("VerifiedFarmers")
+            var allow = false
 
-            startActivity(Intent(this,microfinancesActivity::class.java))
-            dialog.dismiss()
+// Use a ValueEventListener to check if savedUserName exists in VerifiedFarmers
+            database.child(savedUserName).addListenerForSingleValueEvent(object : ValueEventListener {
+                override fun onDataChange(dataSnapshot: DataSnapshot) {
+                    if (dataSnapshot.exists()) {
+                        allow = true
+                    }
+
+                    // Now that we have determined whether the user exists in VerifiedFarmers,
+                    // you can start the appropriate activity here.
+                    if (allow) {
+                        startActivity(Intent(this@homeActivity, microfinancesActivity::class.java))
+                    } else {
+                        startActivity(Intent(this@homeActivity, verifylockActivity::class.java))
+                    }
+                    dialog.dismiss()
+                }
+
+                override fun onCancelled(databaseError: DatabaseError) {
+                    // Handle any errors or cancellations here if needed.
+                    // You can set allow to false in case of errors.
+                    allow = false
+                    dialog.dismiss()
+                }
+            })
         }
         opt_2.setOnClickListener {
 
@@ -230,6 +263,16 @@ class homeActivity : AppCompatActivity() {
         intent.putExtra("key_name", "Hello from MainActivity!")
         startActivity(intent)
     }
+    fun Redirectsignuppage(view: View){
+        val intent = Intent(this, signUpActivity::class.java)
+        intent.putExtra("key_name", "Hello from MainActivity!")
+        startActivity(intent)
+    }
+    fun btnGoToKN(view:View){
+        val intent = Intent(this, mpsellActivity::class.java)
+        intent.putExtra("key_name", "Hello from MainActivity!")
+        startActivity(intent)
 
+    }
 
 }

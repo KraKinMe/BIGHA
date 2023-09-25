@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".signUpActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/my_primary"
+        android:alpha="0.6"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="28dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Bigha"
+
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="60sp"
+            android:textColor="@color/white"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="You are not verified"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="30sp"
+            android:textColor="#E81A0B"/>
+
+
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:layout_marginTop="150dp"
+            android:background="@drawable/lock">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="115dp"
+                android:text="Verify"
+                android:textColor="@color/white"
+                android:background="@color/green"
+                android:layout_marginTop="240dp"
+                android:textSize="40dp"
+                android:padding="10dp"
+                android:onClick="GoToVerification"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
