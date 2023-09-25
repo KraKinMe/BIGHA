@@ -20,25 +20,19 @@
                 android:id="@+id/HomeDiv1"
                 android:layout_width="match_parent"
                 android:layout_height="321dp"
-                android:background="@drawable/app_back"
+                android:background="@drawable/img_1"
                 android:orientation="vertical"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="parent"
                 tools:ignore="UnknownId">
 
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="OUR MISSION"
-                    android:textSize="40dp"
-                    android:layout_gravity="center"
-                    android:textStyle="bold"/>
+
                 <View
                     android:layout_width="300dp"
                     android:layout_height="1dp"
                     android:layout_marginLeft="50dp"
-                    android:background="@color/black"/>
+                    android:layout_marginTop="20dp" />
 
 
                 <TextView
@@ -46,7 +40,7 @@
                     android:layout_height="91dp"
                     android:layout_gravity="center"
                     android:fontFamily="sans-serif-medium"
-                    android:text="'Mitti se ...Mitti ke liye...'"
+                    android:text="'मिट्टी से जन्मा, मिट्टी के लिए बना'"
                     android:textSize="25dp"
                     android:textStyle="bold"/>
                 <!-- Add more content to HomeDiv1 if needed -->
@@ -56,7 +50,7 @@
                 android:layout_width="match_parent"
                 android:id="@+id/HomeDiv2"
                 app:layout_constraintTop_toBottomOf="@+id/HomeDiv1"
-                android:background="@drawable/micro"
+                android:background="@drawable/img1"
                 android:orientation="vertical"
                 android:layout_marginTop="-15dp">
 
@@ -115,7 +109,7 @@
                 android:layout_width="match_parent"
                 android:id="@+id/HomeDiv0"
                 app:layout_constraintTop_toBottomOf="@+id/HomeDiv1"
-                android:background="@drawable/market1"
+                android:background="@drawable/imgmarket"
                 android:orientation="vertical"
                 android:layout_marginTop="-15dp">
 
@@ -174,7 +168,7 @@
                 android:layout_height="300dp"
                 app:layout_constraintTop_toBottomOf="@id/HomeDiv2"
                 app:layout_constraintLeft_toLeftOf="parent"
-                android:background="@drawable/rents"
+                android:background="@drawable/imgrent"
                 android:orientation="vertical"
                 android:id="@+id/HomeDiv3"
                 >
@@ -222,7 +216,7 @@
                 android:layout_height="300dp"
                 app:layout_constraintTop_toBottomOf="@+id/HomeDiv3"
                 app:layout_constraintLeft_toLeftOf="@+id/HomeDiv3"
-                android:background="@drawable/dd"
+                android:background="@drawable/img2"
                 android:orientation="vertical"
                 android:id="@+id/HomeDiv4"
                 >
@@ -273,7 +267,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/HomeDiv4"
                 app:layout_constraintRight_toLeftOf="parent"
                 android:orientation="vertical"
-                android:background="@drawable/tour">
+                android:background="@drawable/imgtourism">
                 <TextView
 
                     android:layout_width="wrap_content"
