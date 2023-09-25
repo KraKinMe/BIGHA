@@ -9,33 +9,20 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/my_primary"
-        android:alpha="0.6"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:layout_above="@+id/card_view"
-        android:padding="28dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Bigha"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif-medium"
-            android:textSize="60sp"
-            android:textColor="@color/white"/>
-    </LinearLayout>
+        android:background="#85F306"
+        android:alpha="0.2"/>
 
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_marginTop="160dp"
+
         app:cardCornerRadius="28dp"
-        android:layout_marginBottom="-28dp"
-        android:id="@+id/card_view">
+        android:id="@+id/card_view"
+        android:outlineSpotShadowColor="@color/black"
+        android:outlineAmbientShadowColor="@color/black">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -45,13 +32,15 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:text="@string/Welcome"
-                android:textColor="@color/my_primary"
+                android:textColor="#109F00"
                 android:textSize="32sp"
                 android:textStyle="bold"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:text="@string/Login_with_info"
                 android:alpha="0.7"/>
             <View
@@ -80,13 +69,25 @@
                 android:text="@string/Password"
                 android:alpha="0.7"
                 android:textStyle="bold"/>
-            <EditText
-                android:id="@+id/passEditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:hint="@string/a_z_a_z_0_9"
-                android:drawableEnd="@drawable/password_eye"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/passEditText"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:hint="@string/a_z_a_z_0_9"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/password_eye"
+                    android:layout_marginTop="10dp"
+                    />
+            </LinearLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -116,7 +117,10 @@
                 android:layout_height="60dp"
                 android:id="@+id/submitlogin"
                 android:text="@string/Login"
-
+                android:textColor="@color/white"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="@color/my_secondary"
+                android:textSize="25dp"
                 />
 
             <View
@@ -129,7 +133,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/Register_Now"
                 android:layout_gravity="center"
-                android:textColor="@color/my_secondary"
+                android:textColor="#074200"
                 android:textStyle="bold"
                 android:onClick="onRegisterNowClicked"
                 android:alpha="0.7"/>
