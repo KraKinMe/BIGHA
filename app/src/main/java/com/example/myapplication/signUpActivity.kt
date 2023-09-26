@@ -48,7 +48,7 @@ class signUpActivity : AppCompatActivity() {
                     val editor = sharedPrefUserName.edit()
                     editor.putString("User",user)
                     editor.apply()
-                    startActivity(Intent(this,homeActivity::class.java))
+                    startActivity(Intent(this,home2Activity::class.java))
                     finish()
                     /// Get function is asynchronous , dont change anything here
                      }else{
@@ -60,7 +60,7 @@ class signUpActivity : AppCompatActivity() {
             Toast.makeText(this,"Network Error",Toast.LENGTH_SHORT).show()
         }
         if(allow==true){
-            startActivity(Intent(this,homeActivity::class.java))
+            startActivity(Intent(this,home2Activity::class.java))
             finish()
         }else{
             Email.text.clear()
