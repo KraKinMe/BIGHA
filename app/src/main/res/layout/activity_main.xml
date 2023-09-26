@@ -12,27 +12,31 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/app_start_bg" />
+        android:src="@drawable/img_2"/>
+    <!--         -->
+
 
     <View
         android:id="@+id/overlayView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#80000000"
+
         android:visibility="visible" />
 
     <!-- Your Existing Layout Content -->
+
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="140dp"
-        android:layout_height="126dp"
+        android:layout_width="342dp"
+        android:layout_height="324dp"
         android:contentDescription="@string/app_name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bigha_logo" />
+        app:layout_constraintVertical_bias="0.171"
+        app:srcCompat="@drawable/bighalogoremovredbg" />
 
     <TextView
         android:id="@+id/textView3"
@@ -41,24 +45,25 @@
         android:layout_marginBottom="32dp"
         android:text="DEV GURUS"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#023B18"
+        android:textColor="@color/black"
         android:textStyle="bold"
+        android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="1"
-        android:background="@color/white"/>
+        />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="FROM"
-        android:background="@color/white"
         android:textStyle="bold"
-        android:textColor="#547E62"
+        android:textColor="@color/black"
+
         app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="@+id/textView3"
         app:layout_constraintStart_toStartOf="@+id/textView3"
