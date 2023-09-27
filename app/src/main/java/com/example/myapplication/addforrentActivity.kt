@@ -61,11 +61,11 @@ class addforrentActivity : AppCompatActivity() {
             val savedUserName=sharedPref.getString("User","def")?:nameTxt
 
        //     Toast.makeText(this,"Agla toast",Toast.LENGTH_SHORT).show()
-            database.child(savedUserName).setValue(Machines).addOnSuccessListener {
-                    Toast.makeText(this,"Your tool is up for Rent",Toast.LENGTH_SHORT).show()
-
+            val machineEntryRef = database.child(savedUserName).push()
+            machineEntryRef.setValue(Machines).addOnSuccessListener {
+                Toast.makeText(this, "Your tool is up for Rent", Toast.LENGTH_SHORT).show()
             }.addOnCanceledListener {
-                Toast.makeText(this,"Not done Bro",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Not done Bro", Toast.LENGTH_SHORT).show()
             }
         }
     }
