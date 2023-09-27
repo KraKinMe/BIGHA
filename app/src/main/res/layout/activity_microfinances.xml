@@ -179,7 +179,8 @@
                 android:textStyle="bold"
                 android:layout_marginBottom="40sp"
                 android:background="@drawable/rounded_button"
-                android:backgroundTint="@color/my_secondary"/>
+                android:backgroundTint="@color/my_secondary"
+                android:onClick="Submit"/>
 
 
 
