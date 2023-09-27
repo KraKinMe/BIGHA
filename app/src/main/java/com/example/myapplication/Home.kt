@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
@@ -45,7 +46,9 @@ class Home : Fragment() {
         val v= inflater.inflate(R.layout.fragment_home, container, false)
         val sharedPref = requireActivity().getSharedPreferences("my_prefs", Context.MODE_PRIVATE)
         val savedUserName = sharedPref.getString("User", null)?:"."
-
+        val userName = sharedPref.getString("name",".")?:"."
+        val userPage = v.findViewById<TextView>(R.id.username)
+        userPage.text=userName
         //MicroFinance Button
         val microBtn = v.findViewById<ImageView>(R.id.arrow_icon1)
         microBtn.setOnClickListener {

@@ -49,6 +49,7 @@ class signUpActivity : AppCompatActivity() {
                     val sharedPrefUserName = getSharedPreferences("my_prefs", Context.MODE_PRIVATE)
                     val editor = sharedPrefUserName.edit()
                     editor.putString("User",user)
+                    editor.putString("name",it.child("name").value.toString())
                     editor.apply()
                     startActivity(Intent(this,home2Activity::class.java))
                     finish()

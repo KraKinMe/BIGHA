@@ -50,12 +50,8 @@ class Profile : Fragment() {
         val user_name=v.findViewById<TextView>(R.id.user_name)
         // you have to access user name from firebase based on this user
 
-        database=FirebaseDatabase.getInstance().getReference("Users")
-        database.child(user).get().addOnSuccessListener {
-            if(it.exists()){
-                user_name.text=it.child("name").value.toString()
-            }
-        }
+
+        user_name.text=sharedPrefUserName.getString("name",".")
         val user_email=v.findViewById<TextView>(R.id.user_email)
         user_email.text=user
 
