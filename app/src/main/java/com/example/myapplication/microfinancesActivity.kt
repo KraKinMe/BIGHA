@@ -43,7 +43,7 @@ class  microfinancesActivity : AppCompatActivity() {
 
     }
         fun previous(view: View) {
-            startActivity(Intent(this, homeActivity::class.java))
+            startActivity(Intent(this, home2Activity::class.java))
             finish()
         }
 
