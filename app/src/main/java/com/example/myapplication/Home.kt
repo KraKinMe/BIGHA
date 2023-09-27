@@ -42,7 +42,6 @@ class Home : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-
         val v= inflater.inflate(R.layout.fragment_home, container, false)
         val sharedPref = requireActivity().getSharedPreferences("my_prefs", Context.MODE_PRIVATE)
         val savedUserName = sharedPref.getString("User", null)?:"."
@@ -101,7 +100,6 @@ class Home : Fragment() {
 
         }
             return v;
-
     }
 //    fun redirectMicro(view: View) {
 //        val intent = Intent(requireActivity(), microfinancesActivity::class.java)
