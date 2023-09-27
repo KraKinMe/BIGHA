@@ -40,7 +40,7 @@ class home2Activity : AppCompatActivity() {
         builder.setMessage("Do you really want to close this app?")
             .setPositiveButton("Yes") { _, _ ->
                 // Close the app
-                finish()
+                finishAffinity()
             }
             .setNegativeButton("No") { _, _ ->
                 // Do nothing, continue with the app

@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -40,6 +41,12 @@ class Profile : Fragment() {
         val backBtn = v.findViewById<ImageView>(R.id.backBtn)
         backBtn.setOnClickListener{
 
+        }
+        val signOut = v.findViewById<ImageView>(R.id.signOut)
+        signOut.setOnClickListener{
+            val intent = Intent(requireActivity(), signUpActivity::class.java)
+            requireActivity().startActivity(intent)
+            requireActivity().finish()
         }
         return v
     }
