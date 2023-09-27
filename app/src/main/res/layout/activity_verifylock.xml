@@ -55,6 +55,8 @@
                 android:padding="10dp"
                 android:onClick="GoToVerification"
                 />
+
+
         </LinearLayout>
     </LinearLayout>
 
