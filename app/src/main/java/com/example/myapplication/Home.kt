@@ -49,7 +49,6 @@ class Home : Fragment() {
         //MicroFinance Button
         val microBtn = v.findViewById<ImageView>(R.id.arrow_icon1)
         microBtn.setOnClickListener {
-
             val database = FirebaseDatabase.getInstance().getReference("VerifiedFarmers")
             var allow = false
 
