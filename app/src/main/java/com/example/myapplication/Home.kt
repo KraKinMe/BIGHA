@@ -101,6 +101,7 @@ class Home : Fragment() {
 
         }
             return v;
+
     }
 //    fun redirectMicro(view: View) {
 //        val intent = Intent(requireActivity(), microfinancesActivity::class.java)
