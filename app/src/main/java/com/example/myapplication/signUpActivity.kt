@@ -16,6 +16,7 @@ class signUpActivity : AppCompatActivity() {
     private lateinit var Password:EditText
     private lateinit var submit: Button
     private lateinit var database: DatabaseReference
+    private lateinit var Name:EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,6 +36,7 @@ class signUpActivity : AppCompatActivity() {
     fun onhomepage(){
         Email = findViewById(R.id.emailEditText)
         Password = findViewById(R.id.passEditText)
+
         val user = Email.text.toString()
         val pas =  Password.text.toString()
         var allow = false
