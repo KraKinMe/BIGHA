@@ -39,7 +39,7 @@ class regActivity : AppCompatActivity() {
         CPassword=findViewById(R.id.cpasss)
 
         val user_id=Email.text.toString()
-        val name = Name.text.toString()
+        val name = capitalizeEachWord(Name.text.toString())
         val pass = Password.text.toString()
         val cpass = CPassword.text.toString()
 
@@ -54,10 +54,17 @@ class regActivity : AppCompatActivity() {
             val User=User(name,pass,user_id)
             database.child(user_id).setValue(User).addOnSuccessListener {
                 val intent =Intent(this, signUpActivity::class.java)
+                startActivity(intent)
                 finish()
             }.addOnCanceledListener {
                 Toast.makeText(this,"Failed",Toast.LENGTH_SHORT).show()
             }
         }
+    }
+
+    fun capitalizeEachWord(input: String): String {
+        val words = input.split(" ")
+        val capitalizedWords = words.map { it.capitalize() }
+        return capitalizedWords.joinToString(" ")
     }
 }
