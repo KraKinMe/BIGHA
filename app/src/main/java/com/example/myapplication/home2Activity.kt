@@ -3,6 +3,10 @@ package com.example.myapplication
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import android.content.Context
+import android.view.View
+import android.content.Intent
+import androidx.appcompat.app.AlertDialog
 import com.example.myapplication.databinding.ActivityHome2Binding
 
 class home2Activity : AppCompatActivity() {
@@ -31,10 +35,23 @@ class home2Activity : AppCompatActivity() {
         }
     }
 
+    override fun onBackPressed() {
+        val builder = AlertDialog.Builder(this)
+        builder.setMessage("Do you really want to close this app?")
+            .setPositiveButton("Yes") { _, _ ->
+                // Close the app
+                finishAffinity()
+            }
+            .setNegativeButton("No") { _, _ ->
+                // Do nothing, continue with the app
+            }
+            .show()
+    }
     private fun replaceFragment(fragment: Fragment){
         val fragmentManager =supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.frame_layout,fragment)
         fragmentTransaction.commit()
     }
+
 }

@@ -262,6 +262,12 @@ class homeActivity : AppCompatActivity() {
         intent.putExtra("key_name", "Hello from MainActivity!")
         startActivity(intent)
     }
+    fun redirectMicro(view: View){
+        val intent = Intent(this, microfinancesActivity::class.java)
+        intent.putExtra("key_name", "Hello from MainActivity!")
+        startActivity(intent)
+    }
+
     fun Redirectsignuppage(view: View){
         val intent = Intent(this, signUpActivity::class.java)
         intent.putExtra("key_name", "Hello from MainActivity!")

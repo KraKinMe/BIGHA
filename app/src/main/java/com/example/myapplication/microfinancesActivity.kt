@@ -7,6 +7,8 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
+import android.widget.EditText
+import android.widget.TextView
 
 import android.widget.Toast
 
@@ -30,6 +32,19 @@ class  microfinancesActivity : AppCompatActivity() {
             "Mustard",
             "Onion"
         )
+        val prices = listOf(
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14"
+        )
+
         val autoComplete: AutoCompleteTextView = findViewById(R.id.auto_Complete)
         val adapter = ArrayAdapter(this, R.layout.list_dropdown, items)
         autoComplete.setAdapter(adapter)
@@ -38,12 +53,14 @@ class  microfinancesActivity : AppCompatActivity() {
             AdapterView.OnItemClickListener { adapterView, view_, i, l ->
                 val itemSelected = adapterView.getItemAtPosition(i)
                 Toast.makeText(this, " Item : $itemSelected", Toast.LENGTH_SHORT).show()
+                val msp = findViewById<TextView>(R.id.msp)
+                msp.text=prices.get(i)
             }
 
 
     }
         fun previous(view: View) {
-            startActivity(Intent(this, homeActivity::class.java))
+            startActivity(Intent(this, home2Activity::class.java))
             finish()
         }
 

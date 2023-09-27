@@ -1,7 +1,9 @@
 package com.example.myapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
@@ -35,5 +37,9 @@ class mpsellActivity : AppCompatActivity() {
                 val itemSelected = adapterView.getItemAtPosition(i)
                 Toast.makeText(this, " Item : $itemSelected", Toast.LENGTH_SHORT).show()
             }
+    }
+    fun previous(view: View){
+        startActivity(Intent(this, home2Activity::class.java))
+        finish()
     }
 }

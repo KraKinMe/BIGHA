@@ -1,10 +1,12 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,8 +36,39 @@ class Home : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+
+        val v= inflater.inflate(R.layout.fragment_home, container, false)
+        val microBtn=v.findViewById<ImageView>(R.id.arrow_icon1)
+        microBtn.setOnClickListener{
+            val intent = Intent(requireActivity(), microfinancesActivity::class.java)
+        requireActivity().startActivity(intent)
+
+        }
+        val marketBtn = v.findViewById<ImageView>(R.id.arrow_icon2)
+        marketBtn.setOnClickListener {
+            val intent = Intent(requireActivity(), mpsellActivity::class.java)
+            requireActivity().startActivity(intent)
+
+        }
+        val rentalBtn = v.findViewById<ImageView>(R.id.arrow_icon3)
+        rentalBtn.setOnClickListener {
+            val intent = Intent(requireActivity(), RentActivity::class.java)
+            requireActivity().startActivity(intent)
+
+        }
+        val toursimBtn = v.findViewById<ImageView>(R.id.arrow_icon4)
+        toursimBtn.setOnClickListener {
+            val intent = Intent(requireActivity(), agrotourismActivity::class.java)
+            requireActivity().startActivity(intent)
+
+        }
+            return v;
     }
+//    fun redirectMicro(view: View) {
+//        val intent = Intent(requireActivity(), microfinancesActivity::class.java)
+//        requireActivity().startActivity(intent)
+//        requireActivity().finish()
+//    }
 
     companion object {
         /**

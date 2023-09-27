@@ -31,6 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginRight="130dp"
+            android:layout_marginLeft="20dp"
             android:text="SELL YOUR CROP"
             android:textStyle="bold"
             android:textAlignment="center"
@@ -64,14 +65,15 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="15dp"
+                android:layout_height="25dp"
                 android:layout_gravity="center"
                 android:alpha="0.7"
+                android:textSize="20dp"
                 android:text="Enter Your Crop Info."
                 android:textStyle="bold" />
             <View
                 android:layout_width="wrap_content"
-                android:layout_height="30dp"/>
+                android:layout_height="20dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -88,7 +90,7 @@
 
                 <AutoCompleteTextView
                     android:id="@+id/SellCropName"
-                    android:layout_width="354dp"
+                    android:layout_width="330dp"
                     android:layout_height="wrap_content"
                     android:inputType="none">
 
@@ -110,7 +112,7 @@
 
             <EditText
                 android:id="@+id/SellQuantity"
-                android:layout_width="match_parent"
+                android:layout_width="330dp"
                 android:layout_height="wrap_content"
                 android:hint="Enter in KiloGrams()"
                 android:inputType="number" />
@@ -126,7 +128,7 @@
                 android:textStyle="bold"/>
             <EditText
                 android:id="@+id/SellMinQuantity"
-                android:layout_width="match_parent"
+                android:layout_width="330dp"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
                 android:hint="Enter in KiloGrams()" />
@@ -141,7 +143,7 @@
                 android:alpha="0.7"
                 android:textStyle="bold"/>
             <EditText
-                android:layout_width="match_parent"
+                android:layout_width="330dp"
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:hint="Enter the Price" />

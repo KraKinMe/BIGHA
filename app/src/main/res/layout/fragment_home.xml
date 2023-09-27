@@ -66,7 +66,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="16dp"
+                >
 
 
                 <TextView
@@ -96,6 +97,7 @@
                 android:layout_marginRight="7dp"
                 android:src="@drawable/right_arrow"
                 android:clickable="true"
+                android:onClick="redirectMicro"
                 android:contentDescription="Navigate" />
 
         </RelativeLayout>
