@@ -13,11 +13,13 @@ import android.widget.TextView
 import android.widget.Toast
 
 class  microfinancesActivity : AppCompatActivity() {
+//    private lateinit var
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_microfinances)
         supportActionBar?.hide()
+
 
 
         val items = listOf(

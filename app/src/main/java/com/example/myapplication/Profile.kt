@@ -28,6 +28,7 @@ class Profile : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -57,8 +58,10 @@ class Profile : Fragment() {
         }
         val user_email=v.findViewById<TextView>(R.id.user_email)
         user_email.text=user
-        backBtn.setOnClickListener{
 
+        backBtn.setOnClickListener{
+            val intent = Intent(requireActivity(), home2Activity::class.java)
+            requireActivity().startActivity(intent)
         }
         val signOut = v.findViewById<ImageView>(R.id.signOut)
         signOut.setOnClickListener{

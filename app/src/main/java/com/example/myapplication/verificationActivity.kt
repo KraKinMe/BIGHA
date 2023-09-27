@@ -39,6 +39,8 @@ class verificationActivity : AppCompatActivity() {
 
             database.child(savedUserName).setValue(VerifiedFarmers).addOnSuccessListener {
                 Toast.makeText(this,"You Are Verified",Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this,home2Activity::class.java))
+                finish()
             }.addOnCanceledListener {
                 Toast.makeText(this,"Kuch to Gadbad Hai Daya",Toast.LENGTH_SHORT).show()
             }

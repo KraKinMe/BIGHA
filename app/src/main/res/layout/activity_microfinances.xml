@@ -73,22 +73,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Land Area"
-                android:alpha="0.7"
-                android:layout_marginLeft="10sp"
-                android:textStyle="bold"
-                android:textSize="20sp"/>
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Will Be taken Directly"
-                android:layout_marginLeft="10sp"
-                android:layout_marginRight="40sp"
-                android:inputType="textPersonName"
-                android:id="@+id/ToolName"/>
             <View
                 android:layout_width="wrap_content"
                 android:layout_height="5dp"/>
@@ -119,22 +103,6 @@
             <View
                 android:layout_width="wrap_content"
                 android:layout_height="10dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Max Grow"
-                android:textSize="20sp"
-                android:layout_marginLeft="10sp"
-                android:textStyle="bold"
-                android:alpha="0.7"/>
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10sp"
-                android:layout_marginRight="40sp"
-                android:hint="Will Be taken Directly"
-                android:inputType="textPersonName"
-                android:id="@+id/priceoftool"/>
             <View
                 android:layout_width="wrap_content"
                 android:layout_height="10dp"/>
@@ -159,10 +127,31 @@
             <View
                 android:layout_width="wrap_content"
                 android:layout_height="10dp"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Investment"
+                android:text="Crop Weight"
+                android:textSize="20sp"
+                android:layout_marginLeft="10sp"
+                android:textStyle="bold"
+                android:alpha="0.7"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="40sp"
+                android:hint="Amount Up For Investment"
+                android:inputType="number"
+                android:id="@+id/CropWeight"/>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Investment Price"
                 android:textSize="20sp"
                 android:layout_marginLeft="10sp"
                 android:textStyle="bold"
@@ -173,8 +162,8 @@
                 android:layout_marginLeft="10sp"
                 android:layout_marginRight="40sp"
                 android:hint="Price/kg"
-                android:inputType="textPersonName"
-                android:id="@+id/Locationtool1"/>
+                android:inputType="number"
+                android:id="@+id/Price"/>
             <View
                 android:layout_width="wrap_content"
                 android:layout_height="10dp"/>
@@ -185,10 +174,12 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="Submit"
-                android:backgroundTint="#BCD9E6"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
+                android:textSize="25dp"
                 android:textStyle="bold"
-                android:layout_marginBottom="40sp"/>
+                android:layout_marginBottom="40sp"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="@color/my_secondary"/>
 
 
 
