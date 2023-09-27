@@ -38,7 +38,7 @@ class verificationActivity : AppCompatActivity() {
             val VerifiedFarmers=VerifiedFarmers(FarmArea,GovtID)
 
             database.child(savedUserName).setValue(VerifiedFarmers).addOnSuccessListener {
-                Toast.makeText(this,savedUserName,Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"You Are Verified",Toast.LENGTH_SHORT).show()
             }.addOnCanceledListener {
                 Toast.makeText(this,"Kuch to Gadbad Hai Daya",Toast.LENGTH_SHORT).show()
             }
@@ -47,7 +47,7 @@ class verificationActivity : AppCompatActivity() {
     }
 
     fun previous(view : View){
-        startActivity(Intent(this,homeActivity::class.java))
+        startActivity(Intent(this,home2Activity::class.java))
         finish()
     }
 
