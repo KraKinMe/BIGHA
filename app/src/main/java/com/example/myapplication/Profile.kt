@@ -5,9 +5,13 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
-
+import android.content.Context
+import android.content.SharedPreferences
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -32,6 +36,7 @@ class Profile : Fragment() {
         }
     }
 
+    private lateinit var database: DatabaseReference
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -39,6 +44,19 @@ class Profile : Fragment() {
         // Inflate the layout for this fragment
         val v= inflater.inflate(R.layout.fragment_profile, container, false)
         val backBtn = v.findViewById<ImageView>(R.id.backBtn)
+        val sharedPrefUserName = requireActivity().getSharedPreferences("my_prefs", Context.MODE_PRIVATE)
+        val user = sharedPrefUserName.getString("User", "John Doe")?:"."
+        val user_name=v.findViewById<TextView>(R.id.user_name)
+        // you have to access user name from firebase based on this user
+
+        database=FirebaseDatabase.getInstance().getReference("Users")
+        database.child(user).get().addOnSuccessListener {
+            if(it.exists()){
+                user_name.text=it.child("name").value.toString()
+            }
+        }
+        val user_email=v.findViewById<TextView>(R.id.user_email)
+        user_email.text=user
         backBtn.setOnClickListener{
 
         }
