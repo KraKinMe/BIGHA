@@ -45,7 +45,20 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             ></TextView>
-
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="45dp"
+                android:text="Your stocks"
+                android:backgroundTint="@color/Iris"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="320dp"
+                android:src="@drawable/stocks"
+                android:scaleType="fitXY"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:onClick="RedirectStocks"
+                />
     </androidx.constraintlayout.widget.ConstraintLayout>
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -78,7 +91,7 @@
                 android:layout_height="5dp"/>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
+                android:layout_width="380dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:hint="Select Crop"

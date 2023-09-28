@@ -81,6 +81,7 @@ class  microfinancesActivity : AppCompatActivity() {
         Log.d("microfinancesActivity", "Starting Submit function")
 
         database1= FirebaseDatabase.getInstance().getReference("VerifiedFarmers")
+
         database1.child(user).get().addOnSuccessListener {
             if(it.exists()){
                 var FieldSizeStr = it.child("farmArea").value
@@ -107,7 +108,12 @@ class  microfinancesActivity : AppCompatActivity() {
                     database = FirebaseDatabase.getInstance().getReference("MFSellers")
                     val MFSeller=MFSeller(selectedCrop,CropWeight.text.toString(),Price.text.toString())
                     Log.d("microfinancesActivity", "Saving data to Firebase: $MFSeller")
-                    database.child(user).setValue(MFSeller).addOnSuccessListener {
+
+                    val mfRef=database.child(user).push()
+
+
+
+                    mfRef.setValue(MFSeller).addOnSuccessListener {
                         Toast.makeText(this,"Added",Toast.LENGTH_SHORT).show()
                         Log.d("microfinancesActivity", "Data added to Firebase successfully")
                         val intent =Intent(this, microfinancesActivity::class.java)
@@ -146,6 +152,8 @@ class  microfinancesActivity : AppCompatActivity() {
         startActivity(Intent(this, home2Activity::class.java))
         finish()
     }
+    fun RedirectStocks(view:View){
 
-
+        startActivity(Intent(this, StocksActivity::class.java))
+    }
 }
