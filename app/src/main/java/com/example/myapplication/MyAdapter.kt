@@ -20,10 +20,12 @@ class MyAdapter(private val userList : ArrayList<MFSeller>): RecyclerView.Adapte
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem = userList[position]
         holder.cropName.text=currentItem.Crop
+        holder.cropWeight.text = currentItem.Weight
         holder.cropPrice.text = currentItem.Price
     }
     class MyViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
         val cropName : TextView = itemView.findViewById<TextView>(R.id.CropName)
+        val cropWeight : TextView = itemView.findViewById<TextView>(R.id.CropWeight)
         val cropPrice : TextView = itemView.findViewById<TextView>(R.id.CropPrice)
 
     }

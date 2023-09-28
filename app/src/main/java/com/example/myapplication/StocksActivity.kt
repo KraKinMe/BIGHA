@@ -36,7 +36,7 @@ class StocksActivity : AppCompatActivity() {
                     var name = childSnapshot.child("crop").getValue(String::class.java) ?: ""
                     var price = childSnapshot.child("price").getValue(String::class.java) ?: ""
                     var weight = childSnapshot.child("weight").getValue(String::class.java) ?: ""
-                    val mf = MFSeller(name, price, weight)
+                    val mf = MFSeller(name,weight,price)
                     stockList.add(mf)
                 }
                 val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
