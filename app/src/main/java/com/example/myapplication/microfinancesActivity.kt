@@ -152,6 +152,8 @@ class  microfinancesActivity : AppCompatActivity() {
         startActivity(Intent(this, home2Activity::class.java))
         finish()
     }
+    fun RedirectStocks(view:View){
 
-
+        startActivity(Intent(this, StocksActivity::class.java))
+    }
 }
