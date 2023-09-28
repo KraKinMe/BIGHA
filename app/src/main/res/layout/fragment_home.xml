@@ -9,6 +9,7 @@
     android:background="@drawable/bg12"
     tools:context=".Home">
 
+
     <androidx.cardview.widget.CardView
         android:id="@+id/profile_card"
         android:layout_width="90dp"
