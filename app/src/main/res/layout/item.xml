@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:layout_margin="20dp"
     android:layout_gravity="center_horizontal"
     app:cardBackgroundColor="@color/lightgreen"
     app:cardCornerRadius="20dp"
     android:layout_marginTop="60dp"
+    android:elevation="10dp"
 
     >
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
+    android:padding="10dp"
+    android:background="@drawable/black_broder"
     android:layout_margin="10dp"
+
     >
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Name of crop       "
+        android:text="Name of crop"
+        android:paddingLeft="10dp"
         android:textSize="20dp"
         />
     <TextView
@@ -27,6 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Wheat"
+        android:layout_marginLeft="60dp"
         android:textSize="20dp"
         />
 
@@ -37,18 +44,21 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:orientation="horizontal"
-        android:layout_marginTop="45dp"
+        android:padding="10dp"
+        android:layout_marginTop="55dp"
         >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Weight of crop     "
+            android:text="Weight of crop"
+            android:paddingLeft="10dp"
             android:textSize="20dp"
             />
         <TextView
             android:id="@+id/CropWeight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
             android:text="50kg"
             android:textSize="20dp"
             />
@@ -58,14 +68,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
+        android:padding="10dp"
         android:layout_marginRight="10dp"
         android:orientation="horizontal"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="100dp"
         >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Price of crop     "
+            android:text="Price of crop"
+            android:paddingLeft="10dp"
             android:textSize="20dp"
             />
         <TextView
@@ -73,6 +85,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="50rs"
+            android:layout_marginLeft="70dp"
             android:textSize="20dp"
             />
 
