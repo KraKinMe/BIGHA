@@ -52,12 +52,15 @@ class DiseaseDetection : Fragment() {
         return inflater.inflate(R.layout.fragment_disease_detection, container, false)
     }
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         //Finding
         imageViewDisease = view.findViewById(R.id.Picture)
         takePhotoButton = view.findViewById(R.id.TakePhoto)
+
+        openCamera()
 
         takePhotoButton.setOnClickListener {
             openCamera()
