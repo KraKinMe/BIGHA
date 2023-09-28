@@ -1,8 +1,10 @@
 package com.example.myapplication
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.DataSnapshot
@@ -53,4 +55,7 @@ class StocksActivity : AppCompatActivity() {
             )
 
 }
+    fun previous(view: View){
+        startActivity(Intent(this,microfinancesActivity::class.java))
+    }
 }
