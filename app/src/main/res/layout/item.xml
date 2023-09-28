@@ -17,7 +17,6 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:padding="10dp"
-    android:background="@drawable/black_broder"
     android:layout_margin="10dp"
 
     >
