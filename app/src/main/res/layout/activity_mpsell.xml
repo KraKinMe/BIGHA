@@ -58,7 +58,7 @@
 
             <AutoCompleteTextView
                 android:id="@+id/SellCropName"
-                android:layout_width="330dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Crop Name"
                 android:inputType="none">
@@ -81,7 +81,7 @@
 
         <EditText
             android:id="@+id/SellQuantity"
-            android:layout_width="332dp"
+            android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_gravity="center_vertical"
             android:background="@drawable/broder22222"
@@ -99,7 +99,7 @@
             android:textStyle="bold"/>
         <EditText
             android:id="@+id/SellMinQuantity"
-            android:layout_width="332dp"
+            android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_gravity="center_vertical"
             android:background="@drawable/broder22222"
@@ -109,14 +109,9 @@
         <View
             android:layout_width="wrap_content"
             android:layout_height="10dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:alpha="0.7"
-            android:textStyle="bold"/>
+
         <EditText
-            android:layout_width="332dp"
+            android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_gravity="center_vertical"
             android:background="@drawable/broder22222"

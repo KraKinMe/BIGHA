@@ -28,7 +28,7 @@
         android:layout_marginTop="70dp"
         android:text="@string/agro_tourism"
         android:textColor="@color/my_primary"
-        android:textSize="40sp"
+        android:textSize="35sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -94,7 +94,7 @@
         android:elevation="10dp"
         app:cardBackgroundColor="#D8F8D4"
         app:cardCornerRadius="28dp"
-        android:layout_width="350dp"
+        android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
@@ -125,7 +125,7 @@
         <ImageView
             android:layout_width="40dp"
             android:layout_height="50dp"
-            android:layout_marginLeft="280dp"
+            android:layout_marginLeft="240dp"
             android:layout_marginTop="100dp"
             android:src="@drawable/right_arrow"
 
