@@ -4,209 +4,150 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/bg22"
     tools:context=".addforrentActivity"
     android:orientation="vertical">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/my_primary"
-        android:alpha="0.6"/>
+        />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:onClick="previous"
         app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="20dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:background="@color/LightGrey"
-        android:id="@+id/topBar"
-        android:layout_width="match_parent"
-        android:layout_height="60dp">
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="wrap_content"
-            android:onClick="previous"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginLeft="20dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:src="@drawable/baseline_arrow_back_24"
-            android:layout_marginTop="5dp"
-            >
-        </ImageView>
+        android:src="@drawable/baseline_arrow_back_24"
+        android:layout_marginTop="5dp"
+        >
+    </ImageView>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Add For Rent"
+        android:textColor="@color/my_primary"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.7" />
 
-        <TextView
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <ImageView
+            android:id="@+id/toolImageView"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/baseline_person_24"/>
+
+        <Button
+            android:id="@+id/selectImageButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginRight="130dp"
-            android:text="@string/add_for_rent"
-            android:textStyle="bold"
-            android:textAlignment="center"
-            android:textSize="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            ></TextView>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_marginBottom="30dp"
+            android:backgroundTint="#D8F8D4"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/select_image"
+            android:textColor="@color/black"
+            android:textStyle="bold">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="28dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginBottom="-28dp"
-        app:layout_constraintBottom_toBottomOf="parent">
+        </Button>
 
-        <LinearLayout
-            android:layout_width="match_parent"
+
+
+        <EditText
+            android:id="@+id/ToolName"
+            android:layout_width="354dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/broder22222"
+            android:gravity="center_vertical"
+            android:hint="   Tool Name"
+            android:inputType="textPersonName" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="10dp" />
+
+
+        <EditText
+            android:id="@+id/Descoftool"
+            android:layout_width="354dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/broder22222"
+            android:hint="   Description"
+            android:inputType="textPersonName" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="10dp" />
+
+
+        <EditText
+            android:id="@+id/priceoftool"
+            android:layout_width="354dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/broder22222"
+            android:hint="   Pricing"
+            android:inputType="textPersonName" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="10dp" />
+
+
+        <EditText
+            android:id="@+id/Locationtool"
+            android:layout_width="354dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/broder22222"
+            android:hint="   Location"
+            android:inputType="textPersonName" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="10dp" />
+
+        <Button
+            android:id="@+id/submitBtn"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_gravity="center"
+            android:layout_marginBottom="40sp"
+            android:backgroundTint="@color/my_primary"
+            android:text="@string/submit"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tool_information"
-                android:textColor="@color/my_primary"
-                android:textStyle="bold"
-                android:textSize="25sp"
-                android:layout_marginTop="5sp"
-                android:layout_gravity="center"/>
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/image_of_product"
-                android:textStyle="bold"
-                android:layout_gravity="center"
-                android:textSize="20dp"
-                android:alpha="0.7"
-                >
-            </TextView>
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="80dp"
-                android:scaleType="centerCrop"
-                android:id="@+id/toolImageView"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
+    </LinearLayout>
 
-                android:src="@drawable/baseline_person_24"
-                >
-            </ImageView>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/selectImageButton"
-                android:text="@string/select_image"
-
-                android:layout_gravity="center"
-                android:textStyle="bold"
-                android:fontFamily="sans-serif-condensed"
-                android:textColor="@color/black"
-                android:backgroundTint="#BCD9E6"
-                >
-
-            </Button>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tool_name"
-                android:alpha="0.7"
-                android:layout_marginLeft="10sp"
-
-                android:textStyle="bold"
-                android:textSize="20sp"/>
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/enter_your_tool_name"
-                android:layout_marginLeft="10sp"
-                android:layout_marginRight="40sp"
-                android:inputType="textPersonName"
-                android:id="@+id/ToolName"/>
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="10dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/description"
-                android:textSize="20sp"
-                android:layout_marginLeft="10sp"
-                android:textStyle="bold"
-                android:alpha="0.7"/>
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10sp"
-                android:layout_marginRight="40sp"
-                android:hint="@string/quality_modal_age_condition"
-                android:inputType="textPersonName"
-                android:id="@+id/Descoftool"/>
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="10dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/pricing"
-                android:textSize="20sp"
-                android:layout_marginLeft="10sp"
-                android:textStyle="bold"
-                android:alpha="0.7"/>
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10sp"
-                android:layout_marginRight="40sp"
-                android:hint="@string/rate_per_day_hour"
-                android:inputType="textPersonName"
-                android:id="@+id/priceoftool"/>
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="10dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/location"
-                android:textSize="20sp"
-                android:layout_marginLeft="10sp"
-                android:textStyle="bold"
-                android:alpha="0.7"/>
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10sp"
-                android:layout_marginRight="40sp"
-                android:hint="@string/enter_your_location"
-                android:inputType="textPersonName"
-                android:id="@+id/Locationtool"/>
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="10dp"/>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="@string/submit"
-                android:id="@+id/submitBtn"
-                android:backgroundTint="#BCD9E6"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:layout_marginBottom="40sp"/>
-
-
-
-
-
-
-
-
-
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

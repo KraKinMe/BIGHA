@@ -9,7 +9,6 @@
     android:background="@drawable/bg12"
     tools:context=".Home">
 
-
     <androidx.cardview.widget.CardView
         android:id="@+id/profile_card"
         android:layout_width="90dp"
@@ -33,7 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="start"
         android:text="Username"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:textColor="#000"
         android:layout_marginBottom="10dp"/>
 
@@ -51,8 +50,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_microfinances"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="170dp"
+        android:layout_height="150dp"
         app:cardBackgroundColor="#9AF48F"
         app:cardCornerRadius="8dp"
         app:cardElevation="4dp"
@@ -86,20 +85,21 @@
 
 
             </LinearLayout>
-
             <!-- Arrow Icon -->
             <ImageView
                 android:id="@+id/arrow_icon1"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
                 android:layout_marginTop="28dp"
-                android:layout_marginRight="7dp"
-                android:src="@drawable/right_arrow"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="17dp"
                 android:clickable="true"
+                android:contentDescription="Navigate"
                 android:onClick="redirectMicro"
-                android:contentDescription="Navigate" />
+                android:src="@drawable/right_arrow"
+                android:focusable="true" />
 
         </RelativeLayout>
 
@@ -108,11 +108,13 @@
     <!-- CardView 2: Marketplace -->
     <androidx.cardview.widget.CardView
         android:id="@+id/card_marketplace"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="170dp"
+        android:layout_height="150dp"
         app:cardCornerRadius="8dp"
         app:cardBackgroundColor="#8EFB81"
-        app:cardElevation="4dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="-167dp"
+        app:cardElevation="10dp"
         android:layout_marginBottom="16dp">
         <RelativeLayout
             android:layout_width="match_parent"
@@ -142,13 +144,15 @@
                 android:id="@+id/arrow_icon2"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
                 android:layout_marginTop="28dp"
-                android:layout_marginRight="7dp"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="17dp"
                 android:src="@drawable/right_arrow"
                 android:clickable="true"
-                android:contentDescription="Navigate" />
+                android:contentDescription="Navigate"
+                android:focusable="true" />
 
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
@@ -156,8 +160,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_rental"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="170dp"
+        android:layout_height="150dp"
         app:cardBackgroundColor="#6BF65A"
         app:cardCornerRadius="8dp"
         app:cardElevation="4dp"
@@ -190,13 +194,15 @@
                 android:id="@+id/arrow_icon3"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
                 android:layout_marginTop="28dp"
-                android:layout_marginRight="7dp"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="17dp"
                 android:src="@drawable/right_arrow"
                 android:clickable="true"
-                android:contentDescription="Navigate" />
+                android:contentDescription="Navigate"
+                android:focusable="true" />
 
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
@@ -204,10 +210,12 @@
     <!-- CardView 4: Tourism -->
     <androidx.cardview.widget.CardView
         android:id="@+id/card_tourism"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="170dp"
+        android:layout_height="150dp"
         app:cardBackgroundColor="#49F135"
         app:cardCornerRadius="8dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="-167dp"
         app:cardElevation="4dp">
         <RelativeLayout
             android:layout_width="match_parent"
@@ -237,13 +245,15 @@
                 android:id="@+id/arrow_icon4"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
                 android:layout_marginTop="28dp"
-                android:layout_marginRight="7dp"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="17dp"
                 android:src="@drawable/right_arrow"
                 android:clickable="true"
-                android:contentDescription="Navigate" />
+                android:contentDescription="Navigate"
+                android:focusable="true" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 

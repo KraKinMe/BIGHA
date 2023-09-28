@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/bg12"
     tools:context=".regActivity">
 
     <TextView
@@ -15,35 +15,32 @@
         android:onClick="previous"
         />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="VERIFICATION"
+        android:layout_marginLeft="30dp"
+        android:textColor="@color/my_primary"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/my_primary"
         android:alpha="0.3"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:layout_above="@+id/card_view"
-        android:padding="28dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="VERIFICATION"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif-medium"
-            android:textSize="40sp"
-            android:textColor="@color/my_primary"/>
-    </LinearLayout>
 
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="100dp"
         app:cardCornerRadius="28dp"
-        android:layout_marginBottom="-28dp"
+        android:elevation="10dp"
+        android:backgroundTint="#D8F8D4"
         android:id="@+id/card_view">
 
         <LinearLayout

@@ -4,153 +4,105 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/rentalback"
+    android:background="@drawable/bg22"
     tools:context=".RentActivity"
     android:orientation="vertical"
     >
-    <androidx.constraintlayout.widget.ConstraintLayout
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:background="@color/LightGrey"
-        android:id="@+id/topBaragro"
-        android:layout_width="match_parent"
-        android:layout_height="60dp">
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="wrap_content"
-            android:onClick="previous"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginLeft="20dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:src="@drawable/baseline_arrow_back_24"
-            android:layout_marginTop="5dp"
-            >
-        </ImageView>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginRight="130dp"
-            android:text="@string/agro_tourism"
-            android:textStyle="bold"
-            android:textAlignment="center"
-            android:textSize="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            ></TextView>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-    <LinearLayout
-        app:layout_constraintTop_toBottomOf="@+id/topBaragro"
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:onClick="previous"
+        android:src="@drawable/baseline_arrow_back_24"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_height="55dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:text="@string/agro_tourism"
+        android:textColor="@color/my_primary"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
         android:id="@+id/Search_layout_Agro"
-        android:layout_marginTop="14dp"
-        android:layout_marginLeft="2dp"
-        android:layout_marginEnd="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/black_border"
         android:orientation="horizontal"
-        android:padding="16dp">
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toTopof="parent">
 
         <EditText
-            android:layout_width="0dp"
-            android:layout_marginBottom="-10dp"
-            android:layout_marginTop="-10dp"
-            android:layout_height="wrap_content"
             android:id="@+id/search_bar_Agro"
-            android:layout_weight="1"
-            android:hint="@string/search"
-
             style="@style/BoldHint"
-            android:inputType="text"/>
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:layout_marginBottom="-10dp"
+            android:layout_weight="1"
+
+            android:hint="@string/search"
+            android:inputType="text" />
+
         <ImageView
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:src="@drawable/baseline_search_24"
-            android:onClick="Searchfn"/>
+            android:onClick="Searchfn"
+            android:src="@drawable/baseline_search_24" />
 
     </LinearLayout>
+
+
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/Search_layout_Agro"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:id="@+id/filterLayout_Agro"
-        android:onClick="OpenFilter"
-        >
-        <Button
-            android:layout_width="150dp"
-            android:text="@string/your_customers"
-            android:drawableLeft="@drawable/baseline_add_shopping_cart_24"
-            android:layout_height="55dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="60dp"
-            />
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginRight="15dp"
-            >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="@string/filter"
-                android:textSize="22sp"
-                android:textStyle="bold"
-                android:id="@+id/FilterText_Agro"
-                android:layout_marginLeft="25dp"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Search_layout_Agro"
+        app:layout_constraintBottom_toTopOf="@+id/card1_Agro"
+        app:layout_constraintEnd_toStartOf="@+id/Search_layout_Agro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6">
 
-                />
-
-            <ImageView
-                android:layout_width="66dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="20dp"
-                android:src="@drawable/filter"
-                app:layout_constraintRight_toLeftOf="@+id/FilterText_Agro"
-                app:layout_constraintTop_toBottomOf="@+id/Search_layout_Agro"></ImageView>
-        </LinearLayout>
+        <ImageView
+            android:layout_width="66dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/filter"
+            app:layout_constraintRight_toLeftOf="@+id/FilterText_Agro"
+            app:layout_constraintTop_toBottomOf="@+id/Search_layout_Agro"></ImageView>
     </LinearLayout>
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="4dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/filterLayout_Agro"
-        app:layout_constraintLeft_toLeftOf="parent"
-
-        >
-        <View
-            android:layout_height="4dp"
-            android:id="@+id/line1_Agro"
-            android:layout_width="wrap_content"
-            android:background="@color/black"
-            >
-
-        </View>
-    </LinearLayout>
     <androidx.cardview.widget.CardView
+        android:id="@+id/card1_Agro"
+        android:elevation="10dp"
+        app:cardBackgroundColor="#D8F8D4"
+        app:cardCornerRadius="28dp"
         android:layout_width="350dp"
-
         android:layout_height="200dp"
-        app:layout_constraintTop_toBottomOf="@+id/filterLayout_Agro"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/Edit_Agro"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/Edit_Agro"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="30dp"
-        android:id="@+id/card1_Agro"
-        >
+        app:layout_constraintTop_toBottomOf="@+id/Search_layout_Agro">
 
         <TextView
             android:layout_width="match_parent"
@@ -161,20 +113,21 @@
             android:textAlignment="center"
             android:textSize="25dp"
             android:textStyle="bold" />
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/black"
+            android:layout_marginLeft="50dp"
             android:layout_marginTop="60dp"
             android:layout_marginRight="50dp"
-            android:layout_marginLeft="50dp"
-            />
+            android:background="@color/black" />
+
         <ImageView
             android:layout_width="40dp"
             android:layout_height="50dp"
-            android:src="@drawable/right_arrow"
-            android:layout_marginTop="100dp"
             android:layout_marginLeft="280dp"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/right_arrow"
 
             >
 
@@ -184,28 +137,38 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
             android:layout_marginLeft="30dp"
-            android:text="@string/destination_details"
-            >
+            android:layout_marginTop="100dp"
+            android:text="@string/destination_details">
 
         </TextView>
         <!--        Not changing this one as text needs to be replaced by IMAGE-->
     </androidx.cardview.widget.CardView>
 
+    <Button
+        android:layout_width="170dp"
+        android:layout_height="55dp"
+        android:backgroundTint="#9AC56F"
+        android:drawableLeft="@drawable/baseline_add_shopping_cart_24"
+        android:text="@string/your_customers"
+        android:layout_marginRight="80dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Edit_Agro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card1_Agro" />
 
 
     <ImageView
+        android:id="@+id/Edit_Agro"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        app:layout_constraintTop_toBottomOf="@+id/card1_Agro"
+        android:layout_marginTop="11dp"
         android:layout_marginRight="29dp"
-        android:layout_marginBottom="10dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="15dp"
         android:background="@drawable/plluss"
-        android:id="@+id/Edit_Agro"
-        />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card1_Agro" />
 
 
 

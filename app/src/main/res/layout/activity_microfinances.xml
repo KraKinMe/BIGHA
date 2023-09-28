@@ -4,208 +4,164 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/moneymoney"
+    android:background="@drawable/bg33"
     tools:context=".microfinancesActivity">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/my_primary"
-        android:alpha="0.6"/>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:onClick="previous"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="45dp"
+        android:text="Your stocks"
+        android:backgroundTint="@color/Iris"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:background="@color/LightGrey"
-        android:id="@+id/topBar"
-        android:layout_width="match_parent"
-        android:layout_height="60dp">
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="wrap_content"
-            android:onClick="previous"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginLeft="20dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:src="@drawable/baseline_arrow_back_24"
-            android:layout_marginTop="5dp"
-            >
-        </ImageView>
+        android:layout_marginLeft="320dp"
+        android:src="@drawable/baseline_attach_money_24"
+        android:scaleType="fitXY"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:onClick="RedirectStocks"
+        />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginRight="130dp"
-            android:text="Micro Finances"
-            android:textStyle="bold"
-            android:textAlignment="center"
-            android:textSize="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            ></TextView>
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="45dp"
-                android:text="Your stocks"
-                android:backgroundTint="@color/Iris"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                android:layout_marginLeft="320dp"
-                android:src="@drawable/stocks"
-                android:scaleType="fitXY"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:onClick="RedirectStocks"
-                />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-    <androidx.cardview.widget.CardView
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Micro Finances"
+        android:textColor="@color/my_primary"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.7" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="28dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginBottom="-28dp"
-        app:layout_constraintBottom_toBottomOf="parent">
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.75">
 
-        <LinearLayout
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="30dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="355dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="30dp"
+            android:hint="Select Crop"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/auto_Complete"
+                android:layout_width="354dp"
+                android:layout_height="wrap_content"
+
+                android:inputType="none">
+
+                <requestFocus />
+            </AutoCompleteTextView>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <View
             android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/msp"
+            android:layout_width="354dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/broder22222"
+            android:gravity="center_vertical"
+            android:inputType="textPersonName"
+            android:text="    M.S.P."
+            android:textAlignment="viewStart"
+            android:textSize="20sp"
+            tools:ignore="RtlCompat" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginBottom="10dp"/>
+
+        <EditText
+            android:id="@+id/CropWeight"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="30sp"
+            android:layout_marginRight="32sp"
+            android:background="@drawable/broder22222"
+            android:hint="    Crop Weight"
+
+            android:inputType="number" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginBottom="10dp"/>
+
+        <EditText
+            android:id="@+id/Price"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="30sp"
+            android:layout_marginRight="32sp"
+            android:background="@drawable/broder22222"
+            android:hint="   Investment Price"
+            android:inputType="number" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginBottom="10dp"/>
+
+
+        <Button
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Enter Details"
-                android:textColor="@color/my_primary"
-                android:textStyle="bold"
-                android:textSize="25sp"
-                android:layout_marginTop="5sp"
-                android:layout_gravity="center"/>
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"/>
-
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="5dp"/>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="380dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:hint="Select Crop"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
-
-                <AutoCompleteTextView
-                    android:id="@+id/auto_Complete"
-                    android:layout_width="354dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="none">
-
-                    <requestFocus />
-                </AutoCompleteTextView>
-
-            </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginBottom="40sp"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="@color/my_secondary"
+            android:onClick="Submit"
+            android:text="Submit"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:textStyle="bold" />
 
 
-
-
-
-
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="10dp"/>
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="10dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="M.S.P"
-                android:textSize="20sp"
-                android:layout_marginLeft="10sp"
-                android:textStyle="bold"
-                android:alpha="0.7"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10sp"
-                android:layout_marginRight="40sp"
-                android:alpha="0.5"
-                android:textSize="20dp"
-                android:text="Price Now a Days"
-                android:inputType="textPersonName"
-                android:id="@+id/msp"/>
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="10dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Crop Weight"
-                android:textSize="20sp"
-                android:layout_marginLeft="10sp"
-                android:textStyle="bold"
-                android:alpha="0.7"/>
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10sp"
-                android:layout_marginRight="40sp"
-                android:hint="Amount Up For Investment"
-                android:inputType="number"
-                android:id="@+id/CropWeight"/>
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="10dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Investment Price"
-                android:textSize="20sp"
-                android:layout_marginLeft="10sp"
-                android:textStyle="bold"
-                android:alpha="0.7"/>
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10sp"
-                android:layout_marginRight="40sp"
-                android:hint="Price/kg"
-                android:inputType="number"
-                android:id="@+id/Price"/>
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="10dp"/>
-
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Submit"
-                android:textColor="@color/white"
-                android:textSize="25dp"
-                android:textStyle="bold"
-                android:layout_marginBottom="40sp"
-                android:background="@drawable/rounded_button"
-                android:backgroundTint="@color/my_secondary"
-                android:onClick="Submit"/>
-
-
-
-
-
-
-
-
-
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
-
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
