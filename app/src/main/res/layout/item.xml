@@ -32,6 +32,7 @@
         android:text="Wheat"
         android:layout_marginLeft="60dp"
         android:textSize="20dp"
+
         />
 
 </LinearLayout>
