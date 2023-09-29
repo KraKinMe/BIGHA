@@ -36,26 +36,26 @@ class  microfinancesActivity : AppCompatActivity() {
         val items = listOf(
             "Wheat",
             "Millet",
-            "Rice",
-            "Cotton",
-            "SugarCane",
+            "Paddy",
+            "Cotton-Medium Staple",
+            "Cotton-Long Staple",
             "GroundNut",
-            "Coffee",
-            "Potato",
+            "Tur(Arhar)",
+            "Moong",
             "Mustard",
-            "Onion"
+            "Urad"
         )
         val prices = listOf(
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14"
+            "20",
+            "23",
+            "20",
+            "60",
+            "63",
+            "58",
+            "66",
+            "77",
+            "50",
+            "66"
         )
 
         val autoComplete: AutoCompleteTextView = findViewById(R.id.auto_Complete)
@@ -133,18 +133,19 @@ class  microfinancesActivity : AppCompatActivity() {
 
     }
 
+
     fun MC(FS: Int?, SC: String?): Int {
         return when (SC) {
-            "Wheat" -> FS?.times(1) ?: 0
-            "Millet" -> FS?.times(2) ?: 0
-            "Rice" -> FS?.times(3) ?: 0
-            "Cotton" -> FS?.times(4) ?: 0
-            "SugarCane" -> FS?.times(5) ?: 0
-            "GroundNut" -> FS?.times(6) ?: 0
-            "Coffee" -> FS?.times(7) ?: 0
-            "Potato" -> FS?.times(8) ?: 0
-            "Mustard" -> FS?.times(9) ?: 0
-            "Onion" -> FS?.times(10) ?: 0
+            "Wheat" -> FS?.times(1600) ?: 0
+            "Millet" -> FS?.times(1100) ?: 0
+            "Paddy" -> FS?.times(2600) ?: 0
+            "Cotton-Medium Staple" -> FS?.times(1400) ?: 0
+            "Cotton-Long Staple" -> FS?.times(600) ?: 0
+            "GroundNut" -> FS?.times(1600) ?: 0
+            "Tur(Arhar)" -> FS?.times(370) ?: 0
+            "Moong" -> FS?.times(370) ?: 0
+            "Mustard" -> FS?.times(700) ?: 0
+            "Urad" -> FS?.times(1000) ?: 0
             else -> 0
         }
     }
