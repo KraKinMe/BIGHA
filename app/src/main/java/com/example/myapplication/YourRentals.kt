@@ -1,9 +1,9 @@
 package com.example.myapplication
 
-import android.content.Context
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.content.Context
+import android.content.Intent
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -12,39 +12,38 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-
-import com.google.firebase.database.*
-
 import java.util.ArrayList
 
-
-class StocksActivity : AppCompatActivity() {
-
+class YourRentals : AppCompatActivity() {
     private lateinit var database: DatabaseReference
-    private val stockList = ArrayList<MFSeller>()
-
+    private val ToolList = ArrayList<Machines>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_stocks)
+        setContentView(R.layout.activity_your_rentals)
+
         val sharedPref=getSharedPreferences("my_prefs", Context.MODE_PRIVATE)
         val savedUserName=sharedPref.getString("User","def")?:"."
 
-        val database = FirebaseDatabase.getInstance().reference.child("MFSellers")
+        val database = FirebaseDatabase.getInstance().reference.child("Machines")
         val query = database.child(savedUserName)
         query.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
 //                val stockList = ArrayList<MFSeller>()
                 for (childSnapshot in dataSnapshot.children) {
-                    var name = childSnapshot.child("crop").getValue(String::class.java) ?: ""
+                    var name = childSnapshot.child("name").getValue(String::class.java) ?: ""
                     var price = childSnapshot.child("price").getValue(String::class.java) ?: ""
-                    var weight = childSnapshot.child("weight").getValue(String::class.java) ?: ""
-                    val mf = MFSeller(name,weight,price)
-                    stockList.add(mf)
+                    var image = childSnapshot.child("image").getValue(String::class.java) ?: ""
+
+                    var desc = childSnapshot.child("desc").getValue(String::class.java) ?: ""
+
+                    var location = childSnapshot.child("location").getValue(String::class.java) ?: ""
+                    val mf = Machines(name,desc,image,price,location)
+                    ToolList.add(mf)
                 }
                 val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
-                val adapter = MyAdapter(stockList) // Pass the stockList to the adapter
+                val adapter = MyAdapter2(ToolList) // Pass the stockList to the adapter
                 recyclerView.adapter = adapter
-                recyclerView.layoutManager = LinearLayoutManager(this@StocksActivity)
+                recyclerView.layoutManager = LinearLayoutManager(this@YourRentals)
             }
 
             override fun onCancelled(databaseError: DatabaseError) {
@@ -52,10 +51,10 @@ class StocksActivity : AppCompatActivity() {
             }
 
         }
-            )
+        )
 
-}
-    fun previous(view: View){
-        startActivity(Intent(this,microfinancesActivity::class.java))
+    }
+    fun previous(view : View){
+        startActivity(Intent(this,RentActivity::class.java))
     }
 }

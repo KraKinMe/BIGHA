@@ -4,13 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/bg44"
     tools:context=".signUpActivity">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/my_primary"
-        android:alpha="0.6"/>
+        />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,27 +21,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/Bigha"
-
             android:textStyle="bold"
             android:fontFamily="sans-serif-medium"
             android:textSize="60sp"
-            android:textColor="@color/white"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="You are not verified"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif-medium"
-            android:textSize="30sp"
-            android:textColor="#E81A0B"/>
+            android:textColor="@color/my_primary"/>
+
 
 
         <LinearLayout
             android:layout_width="350dp"
             android:layout_height="350dp"
-            android:layout_marginTop="150dp"
-            android:background="@drawable/lock">
+            android:layout_marginTop="100dp"
+            android:background="@drawable/lock"
+            android:layout_marginBottom="60dp"
+            >
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -58,6 +50,16 @@
 
 
         </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="You are not verified"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="30sp"
+            android:textColor="#E81A0B"/>
     </LinearLayout>
 
 

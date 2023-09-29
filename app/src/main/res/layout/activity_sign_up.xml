@@ -13,11 +13,11 @@
         android:alpha="0.2"/>
 
     <androidx.cardview.widget.CardView
-        android:layout_width="350dp"
+        android:layout_width="match_parent"
         android:layout_marginLeft="28dp"
         android:layout_marginRight="28dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="100dp"
 
         app:cardCornerRadius="28dp"
         android:id="@+id/card_view"
