@@ -88,6 +88,20 @@
                     android:layout_marginTop="10dp"
                     />
             </LinearLayout>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Forgot_pass"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -96,17 +110,14 @@
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/Remember_me"
+                    android:text="Keep Me Signed In"
                     android:layout_centerVertical="true"
-                    android:alpha="0.7"/>
+                    android:alpha="0.7"
+                    android:id="@+id/KMSI"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/Forgot_pass"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"/>
             </RelativeLayout>
+
+
 
             <View
                 android:layout_width="wrap_content"
