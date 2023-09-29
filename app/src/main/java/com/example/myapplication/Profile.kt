@@ -52,6 +52,7 @@ class Profile : Fragment() {
 
 
         user_name.text=sharedPrefUserName.getString("name",".")
+
         val user_email=v.findViewById<TextView>(R.id.user_email)
         user_email.text=user
 
@@ -61,6 +62,15 @@ class Profile : Fragment() {
         }
         val signOut = v.findViewById<ImageView>(R.id.signOut)
         signOut.setOnClickListener{
+            //Ticking off KMSI
+            val sharedPrefs = requireActivity().getSharedPreferences("my_prefs", Context.MODE_PRIVATE)
+            val editor = sharedPrefs.edit()
+            editor.remove("User")
+            editor.remove("name")
+            editor.remove("KMSI")
+            editor.apply()
+
+
             val intent = Intent(requireActivity(), signUpActivity::class.java)
             requireActivity().startActivity(intent)
             requireActivity().finish()
