@@ -87,7 +87,8 @@
                     android:layout_marginTop="110dp"
                     android:text="Krishi Nivesh"
                     android:textColor="#000"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -146,7 +147,8 @@
                     android:layout_marginTop="110dp"
                     android:text="Market Place"
                     android:textColor="#000"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -186,7 +188,8 @@
                 android:layout_gravity="center_horizontal"
                 android:text="Rental Platform"
                 android:textColor="#000"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:textStyle="bold"/>
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -222,9 +225,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="110dp"
                 android:layout_gravity="center_horizontal"
-                android:text="Argo Tourism"
+                android:text="Agro Tourism"
                 android:textColor="#000"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:textStyle="bold"/>
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
