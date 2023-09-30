@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
@@ -50,7 +51,7 @@ class Home : Fragment() {
         val userPage = v.findViewById<TextView>(R.id.username)
         userPage.text=userName
         //MicroFinance Button
-        val microBtn = v.findViewById<ImageView>(R.id.arrow_icon1)
+        val microBtn = v.findViewById<CardView>(R.id.card_microfinances)
         microBtn.setOnClickListener {
             val database = FirebaseDatabase.getInstance().getReference("VerifiedFarmers")
             var allow = false
@@ -83,19 +84,19 @@ class Home : Fragment() {
 
 
 
-        val marketBtn = v.findViewById<ImageView>(R.id.arrow_icon2)
+        val marketBtn = v.findViewById<CardView>(R.id.card_marketplace)
         marketBtn.setOnClickListener {
             val intent = Intent(requireActivity(), mpsellActivity::class.java)
             requireActivity().startActivity(intent)
 
         }
-        val rentalBtn = v.findViewById<ImageView>(R.id.arrow_icon3)
+        val rentalBtn = v.findViewById<CardView>(R.id.card_rental)
         rentalBtn.setOnClickListener {
             val intent = Intent(requireActivity(), RentActivity::class.java)
             requireActivity().startActivity(intent)
 
         }
-        val toursimBtn = v.findViewById<ImageView>(R.id.arrow_icon4)
+        val toursimBtn = v.findViewById<CardView>(R.id.card_tourism)
         toursimBtn.setOnClickListener {
             val intent = Intent(requireActivity(), agrotourismActivity::class.java)
             requireActivity().startActivity(intent)
