@@ -71,9 +71,10 @@
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="300dp"
-            android:layout_height="75dp"
+            android:layout_height="55dp"
             android:layout_marginLeft="30dp"
             android:hint="Select Crop"
+            android:background="@drawable/broder22222"
             app:boxCornerRadiusBottomEnd="10dp"
             app:boxCornerRadiusBottomStart="10dp"
             app:boxCornerRadiusTopEnd="10dp"
@@ -83,7 +84,6 @@
                 android:id="@+id/auto_Complete"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:inputType="none">
 
                 <requestFocus />
