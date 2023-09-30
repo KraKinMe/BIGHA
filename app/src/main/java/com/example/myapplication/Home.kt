@@ -1,13 +1,18 @@
 package com.example.myapplication
 
+import android.app.Dialog
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.Window
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
@@ -102,6 +107,35 @@ class Home : Fragment() {
             requireActivity().startActivity(intent)
 
         }
+
+        //KNOW MORE BUTTONS
+
+        val KM_MF = v.findViewById<ImageView>(R.id.iconinfo1)
+        val KM_MP = v.findViewById<ImageView>(R.id.iconinfo2)
+        val KM_Rent = v.findViewById<ImageView>(R.id.iconinfo3)
+        val KM_Agro = v.findViewById<ImageView>(R.id.iconinfo4)
+
+        KM_MF.setOnClickListener {
+            val FName:String?="Krishi Nivesh"
+            val FExplain:String?="Farmers can get Payment for Crops before Sowing them to get Financial Support"
+            showCustomDialogBox1(FName,FExplain)
+        }
+        KM_MP.setOnClickListener {
+            val FName:String?="Market Place"
+            val FExplain:String?="Farmers can make a Direct Contact with any Buyer"
+            showCustomDialogBox1(FName,FExplain)
+        }
+        KM_Rent.setOnClickListener {
+            val FName:String?="Rental Platform"
+            val FExplain:String?="Farmers can Rent out as well as Take others equipments on Rent"
+            showCustomDialogBox1(FName,FExplain)
+        }
+        KM_Agro.setOnClickListener {
+            val FName:String?="Agro Tourism"
+            val FExplain:String?="Farmers can provide tourism in their farm with the help of Agro-Sahayak"
+            showCustomDialogBox1(FName,FExplain)
+        }
+
             return v;
     }
 //    fun redirectMicro(view: View) {
@@ -109,6 +143,31 @@ class Home : Fragment() {
 //        requireActivity().startActivity(intent)
 //        requireActivity().finish()
 //    }
+
+
+
+    private fun showCustomDialogBox1(FName: String?,FExplain:String?) {
+        val dialog = Dialog(requireContext())
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog.setCancelable(false)
+        dialog.setContentView(R.layout.layout_know_more)
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+
+        val FeatureName : TextView =dialog.findViewById(R.id.FeatureName)
+        val FeatureExplain : TextView =dialog.findViewById(R.id.FeatureExplain)
+        val Close : ImageView = dialog.findViewById(R.id.closethis)
+
+        FeatureName.text=FName
+        FeatureExplain.text=FExplain
+
+        Close.setOnClickListener {
+            dialog.dismiss()
+        }
+
+        dialog.show()
+
+    }
+
 
     companion object {
         /**

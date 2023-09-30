@@ -141,14 +141,14 @@ class homeActivity : AppCompatActivity() {
 
         val FeatureName : TextView =dialog.findViewById(R.id.FeatureName)
         val FeatureExplain : TextView =dialog.findViewById(R.id.FeatureExplain)
-        val btnBackKM : Button = dialog.findViewById(R.id.btnBackKM)
+//        val btnBackKM : Button = dialog.findViewById(R.id.btnBackKM)
 
         FeatureName.text=FName
         FeatureExplain.text=FExplain
 
-        btnBackKM.setOnClickListener {
-            dialog.dismiss()
-        }
+//        btnBackKM.setOnClickListener {
+//            dialog.dismiss()
+//        }
 
         dialog.show()
 

@@ -48,11 +48,12 @@
         android:layout_marginBottom="40dp"/>
 
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
+        android:layout_width="330dp"
         android:layout_height="335dp"
         app:cardCornerRadius="20dp"
         android:elevation="10dp"
-        android:backgroundTint="#AFE4A9">
+        android:backgroundTint="#AFE4A9"
+        android:layout_gravity="center">
 
 
         <androidx.cardview.widget.CardView
@@ -62,7 +63,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginBottom="16dp"
-            app:cardBackgroundColor="#9AF48F"
+            app:cardBackgroundColor="#49F135"
             app:cardCornerRadius="8dp"
             app:cardElevation="4dp">
 
@@ -84,13 +85,13 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="110dp"
-                    android:text="Microfinances"
+                    android:text="Krishi Nivesh"
                     android:textColor="#000"
                     android:textSize="18sp" />
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/iconinfo"
+                    android:id="@+id/iconinfo1"
                     android:onClick="knowmore1"
                     android:src="@drawable/baseline_info_24"
                     android:layout_gravity="top|end"
@@ -127,7 +128,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="60dp"
             android:layout_marginBottom="16dp"
-            app:cardBackgroundColor="#8EFB81"
+            app:cardBackgroundColor="#49F135"
             app:cardCornerRadius="8dp"
             app:cardElevation="10dp">
 
@@ -149,7 +150,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/iconinfo1"
+                    android:id="@+id/iconinfo2"
                     android:onClick="knowmore1"
                     android:src="@drawable/baseline_info_24"
                     android:layout_gravity="top|end"
@@ -167,7 +168,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="170dp"
             android:layout_marginBottom="16dp"
-            app:cardBackgroundColor="#6BF65A"
+            app:cardBackgroundColor="#49F135"
             app:cardCornerRadius="8dp"
             app:cardElevation="4dp">
 
@@ -183,13 +184,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="110dp"
                 android:layout_gravity="center_horizontal"
-                android:text="Rental"
+                android:text="Rental Platform"
                 android:textColor="#000"
                 android:textSize="18sp" />
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/iconinfo2"
+                android:id="@+id/iconinfo3"
                 android:onClick="knowmore1"
                 android:src="@drawable/baseline_info_24"
                 android:layout_gravity="top|end"
@@ -227,7 +228,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/iconinfo3"
+                android:id="@+id/iconinfo4"
                 android:onClick="knowmore1"
                 android:src="@drawable/baseline_info_24"
                 android:layout_gravity="top|end"
