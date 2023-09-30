@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="300dp"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardBackgroundColor="@color/white"
@@ -18,13 +18,14 @@
             android:textColor="@color/green"
             android:textStyle="bold"
             android:text="@string/app_name"
-            android:gravity="center"
+            android:layout_marginLeft="60dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="-10dp"
             android:orientation="horizontal">
             <TextView
                 android:text="MSP:- ₹"
@@ -51,6 +52,8 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
+            android:layout_marginLeft="-9dp"
             android:orientation="horizontal">
             <TextView
                 android:text="INVESTMENT:- ₹"
@@ -82,6 +85,7 @@
             android:orientation="horizontal"
             android:gravity="center"
             android:layout_marginTop="20dp"
+            android:layout_marginLeft="-10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <Button
@@ -90,6 +94,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="BACK"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
                 android:textSize="14sp"
                 android:layout_marginRight="10sp"
                 />
@@ -97,7 +103,7 @@
             <Button
                 android:id="@+id/opt_2"
                 android:onClick="CONFIRM"
-                android:layout_width="wrap_content"
+                android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:text="CONFIRM"
                 android:textSize="14sp"

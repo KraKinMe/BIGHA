@@ -106,7 +106,8 @@
             android:background="@drawable/broder22222"
             android:gravity="center_vertical"
             android:inputType="textPersonName"
-            android:text="    M.S.P."
+            android:text="M.S.P."
+            android:paddingLeft="20dp"
             android:textAlignment="viewStart"
             android:textSize="20sp"
             tools:ignore="RtlCompat" />
