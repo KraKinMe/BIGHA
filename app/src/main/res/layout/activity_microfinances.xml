@@ -73,8 +73,9 @@
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="300dp"
-            android:layout_height="55dp"
+            android:layout_height="60dp"
             android:layout_marginLeft="30dp"
+            android:paddingTop="3dp"
             android:hint="Select Crop"
             android:background="@drawable/broder22222"
             app:boxCornerRadiusBottomEnd="10dp"
@@ -106,7 +107,8 @@
             android:background="@drawable/broder22222"
             android:gravity="center_vertical"
             android:inputType="textPersonName"
-            android:text="    M.S.P."
+            android:text="M.S.P."
+            android:paddingLeft="20dp"
             android:textAlignment="viewStart"
             android:textSize="20sp"
             tools:ignore="RtlCompat" />
