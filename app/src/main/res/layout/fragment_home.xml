@@ -66,29 +66,40 @@
             app:cardCornerRadius="8dp"
             app:cardElevation="4dp">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent">-->
 
                 <!-- Content of the CardView -->
+
                 <ImageView
                     android:layout_width="120dp"
                     android:layout_height="120dp"
-                    android:src="@drawable/icon3"
-                    android:layout_marginTop="10dp"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/icon_3" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
+                    android:layout_gravity="center_horizontal"
                     android:layout_marginTop="110dp"
                     android:text="Microfinances"
                     android:textColor="#000"
                     android:textSize="18sp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/iconinfo"
+                    android:onClick="knowmore1"
+                    android:src="@drawable/baseline_info_24"
+                    android:layout_gravity="top|end"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"/>
 
 
-<!--                <ImageView-->
+
+                <!--                <ImageView-->
 <!--                    android:id="@+id/arrow_icon1"-->
 <!--                    android:layout_width="24dp"-->
 <!--                    android:layout_height="24dp"-->
@@ -103,7 +114,7 @@
 <!--                    android:onClick="redirectMicro"-->
 <!--                    android:src="@drawable/right_arrow" />-->
 
-            </RelativeLayout>
+<!--            </RelativeLayout>-->
 
         </androidx.cardview.widget.CardView>
 
@@ -120,47 +131,32 @@
             app:cardCornerRadius="8dp"
             app:cardElevation="10dp">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Marketplace"
-                        android:textColor="#000"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Marketplace description goes here."
-                        android:textColor="#888" />
-
-                </LinearLayout>
-
                 <ImageView
-                    android:id="@+id/arrow_icon2"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginTop="28dp"
-                    android:layout_marginEnd="14dp"
-                    android:layout_marginBottom="17dp"
-                    android:clickable="true"
-                    android:contentDescription="Navigate"
-                    android:focusable="true"
-                    android:src="@drawable/right_arrow" />
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/icon_4" />
 
-            </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="110dp"
+                    android:text="Market Place"
+                    android:textColor="#000"
+                    android:textSize="18sp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/iconinfo1"
+                    android:onClick="knowmore1"
+                    android:src="@drawable/baseline_info_24"
+                    android:layout_gravity="top|end"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"/>
+
+
         </androidx.cardview.widget.CardView>
 
 
@@ -175,47 +171,31 @@
             app:cardCornerRadius="8dp"
             app:cardElevation="4dp">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/icon_2" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="16dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="110dp"
+                android:layout_gravity="center_horizontal"
+                android:text="Rental"
+                android:textColor="#000"
+                android:textSize="18sp" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/iconinfo2"
+                android:onClick="knowmore1"
+                android:src="@drawable/baseline_info_24"
+                android:layout_gravity="top|end"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"/>
 
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Rental"
-                        android:textColor="#000"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Rental description goes here."
-                        android:textColor="#888" />
-
-                </LinearLayout>
-
-                <ImageView
-                    android:id="@+id/arrow_icon3"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginTop="28dp"
-                    android:layout_marginEnd="14dp"
-                    android:layout_marginBottom="17dp"
-                    android:clickable="true"
-                    android:contentDescription="Navigate"
-                    android:focusable="true"
-                    android:src="@drawable/right_arrow" />
-
-            </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
         <!-- CardView 4: Tourism -->
@@ -229,46 +209,30 @@
             app:cardCornerRadius="8dp"
             app:cardElevation="4dp">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/icon1" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Tourism"
-                        android:textColor="#000"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Tourism description goes here."
-                        android:textColor="#888" />
-
-                </LinearLayout>
-
-                <ImageView
-                    android:id="@+id/arrow_icon4"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginTop="28dp"
-                    android:layout_marginEnd="14dp"
-                    android:layout_marginBottom="17dp"
-                    android:clickable="true"
-                    android:contentDescription="Navigate"
-                    android:focusable="true"
-                    android:src="@drawable/right_arrow" />
-            </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="110dp"
+                android:layout_gravity="center_horizontal"
+                android:text="Argo Tourism"
+                android:textColor="#000"
+                android:textSize="18sp" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/iconinfo3"
+                android:onClick="knowmore1"
+                android:src="@drawable/baseline_info_24"
+                android:layout_gravity="top|end"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"/>
         </androidx.cardview.widget.CardView>
     </androidx.cardview.widget.CardView>
 
