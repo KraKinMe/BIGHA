@@ -29,7 +29,9 @@
         android:backgroundTint="@color/Iris"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="320dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="60dp"
+        android:layout_marginLeft="300dp"
         android:src="@drawable/baseline_attach_money_24"
         android:scaleType="fitXY"
         android:layout_marginTop="10dp"
@@ -78,7 +80,6 @@
             app:boxCornerRadiusBottomStart="10dp"
             app:boxCornerRadiusTopEnd="10dp"
             app:boxCornerRadiusTopStart="10dp">
-
             <AutoCompleteTextView
                 android:id="@+id/auto_Complete"
                 android:layout_width="match_parent"
@@ -123,8 +124,8 @@
             android:layout_marginLeft="30sp"
             android:layout_marginRight="30sp"
             android:background="@drawable/broder22222"
-            android:hint="    Crop Weight"
-
+            android:hint="Crop Weight"
+            android:padding="20dp"
             android:inputType="number" />
 
         <View
@@ -139,7 +140,8 @@
             android:layout_marginLeft="30sp"
             android:layout_marginRight="32sp"
             android:background="@drawable/broder22222"
-            android:hint="   Investment Price"
+            android:hint="Investment Price"
+            android:padding="20dp"
             android:inputType="number" />
 
         <View

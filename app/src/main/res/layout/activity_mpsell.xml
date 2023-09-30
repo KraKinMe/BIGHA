@@ -85,7 +85,8 @@
             android:layout_height="60dp"
             android:layout_gravity="center_vertical"
             android:background="@drawable/broder22222"
-            android:hint="    Total Quatinty (kg)"
+            android:hint="Total Quatinty (kg)"
+            android:padding="20dp"
             android:inputType="number" />
 
         <View
@@ -104,7 +105,9 @@
             android:layout_gravity="center_vertical"
             android:background="@drawable/broder22222"
             android:inputType="textPassword"
-            android:hint="    Minimum Buying Limit (kg)" />
+            android:hint="Minimum Buying Limit (kg)"
+            android:padding="20dp"
+            />
 
         <View
             android:layout_width="wrap_content"
@@ -116,7 +119,9 @@
             android:layout_gravity="center_vertical"
             android:background="@drawable/broder22222"
             android:inputType="number"
-            android:hint="    Price/KG" />
+            android:hint="Price/KG"
+            android:padding="20dp"
+            />
 
         <RelativeLayout
             android:layout_width="match_parent"

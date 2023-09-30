@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.Toast
 import com.google.firebase.database.DatabaseReference
@@ -17,12 +18,30 @@ class signUpActivity : AppCompatActivity() {
     private lateinit var submit: Button
     private lateinit var database: DatabaseReference
     private lateinit var Name:EditText
+    private lateinit var kmsiCheckBox: CheckBox
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
         supportActionBar?.hide()
+
         submit = findViewById(R.id.submitlogin)
+        Email = findViewById(R.id.emailEditText)
+        Password = findViewById(R.id.passEditText)
+        kmsiCheckBox = findViewById(R.id.KMSI)
+
+        val sharedPrefs = getSharedPreferences("my_prefs", Context.MODE_PRIVATE)
+        val kmsi = sharedPrefs.getBoolean("KMSI", false)
+
+        if (kmsi) {
+            val user = sharedPrefs.getString("User", null)
+            if (user != null) {
+                //Pehle aa chuka hai
+                startActivity(Intent(this, home2Activity::class.java))
+                finish()
+                return
+            }
+        }
 
         submit.setOnClickListener{
             onhomepage()
@@ -46,6 +65,13 @@ class signUpActivity : AppCompatActivity() {
                 val StoredPass=it.child("password").value
                 if(pas.equals(StoredPass)){
                     allow=true
+
+                    val sharedPrefs = getSharedPreferences("my_prefs", Context.MODE_PRIVATE)
+                    val editorKMSI = sharedPrefs.edit()
+                    editorKMSI.putString("User", user)
+                    editorKMSI.putBoolean("KMSI", kmsiCheckBox.isChecked) // Set KMSI to true if the user wants to stay signed in
+                    editorKMSI.apply()
+
                     val sharedPrefUserName = getSharedPreferences("my_prefs", Context.MODE_PRIVATE)
                     val editor = sharedPrefUserName.edit()
                     editor.putString("User",user)
