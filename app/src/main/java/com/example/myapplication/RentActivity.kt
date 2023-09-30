@@ -18,6 +18,9 @@ class RentActivity : AppCompatActivity() {
     }
     fun addyourmachineforrent(view: View){
         startActivity(Intent(this,addforrentActivity::class.java))
+    }
+    fun RentalsView(view: View){
 
+        startActivity(Intent(this,YourRentals::class.java))
     }
 }

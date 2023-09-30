@@ -64,6 +64,8 @@ class addforrentActivity : AppCompatActivity() {
             val machineEntryRef = database.child(savedUserName).push()
             machineEntryRef.setValue(Machines).addOnSuccessListener {
                 Toast.makeText(this, "Your tool is up for Rent", Toast.LENGTH_SHORT).show()
+
+                startActivity(Intent(this,RentActivity::class.java))
             }.addOnCanceledListener {
                 Toast.makeText(this, "Not done Bro", Toast.LENGTH_SHORT).show()
             }
