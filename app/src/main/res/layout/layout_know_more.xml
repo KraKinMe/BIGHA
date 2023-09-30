@@ -13,6 +13,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="20dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:id="@+id/closethis"
+            android:paddingRight="270dp"
+            android:src="@drawable/close"
+            android:layout_gravity="start"/>
+
         <TextView
             android:textSize="18sp"
             android:textColor="@color/green"
@@ -46,19 +55,6 @@
             android:layout_height="wrap_content"
             />
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <Button
-                android:id="@+id/btnBackKM"
-                android:textSize="14sp"
-                android:text="@string/back"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
 
 
     </LinearLayout>
