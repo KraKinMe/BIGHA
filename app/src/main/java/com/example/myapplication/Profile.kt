@@ -7,11 +7,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.content.Context
 import android.content.SharedPreferences
+import android.graphics.Color
+import android.util.Log
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.ValueEventListener
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -48,7 +53,34 @@ class Profile : Fragment() {
         val sharedPrefUserName = requireActivity().getSharedPreferences("my_prefs", Context.MODE_PRIVATE)
         val user = sharedPrefUserName.getString("User", "John Doe")?:"."
         val user_name=v.findViewById<TextView>(R.id.user_name)
+        val VON=v.findViewById<TextView>(R.id.VerifiedOrNot)
         // you have to access user name from firebase based on this user
+
+        database=FirebaseDatabase.getInstance().getReference("VerifiedFarmers")
+        var allow=false
+
+        database.child(user).addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    Log.d("Firebase", "Data exists, allow = true")
+                    allow = true
+                } else {
+                    Log.d("Firebase", "Data does not exist, allow = false")
+                    allow = false
+                }
+                // Set the text and color here
+                updateVerificationStatus(allow)
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                Log.e("Firebase", "Database error: ${error.message}")
+                allow = false
+                // Set the text and color here
+                updateVerificationStatus(allow)
+            }
+        })
+
+
 
 
         user_name.text=sharedPrefUserName.getString("name",".")
@@ -76,6 +108,17 @@ class Profile : Fragment() {
             requireActivity().finish()
         }
         return v
+    }
+
+    private fun updateVerificationStatus(isVerified: Boolean) {
+        val VON = requireView().findViewById<TextView>(R.id.VerifiedOrNot)
+        if (isVerified) {
+            VON.text = "You are Verified"
+            VON.setTextColor(Color.GREEN)
+        } else {
+            VON.text = "You are Not Verified"
+            VON.setTextColor(Color.RED)
+        }
     }
 
 
