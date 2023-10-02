@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.content.Context
-import android.content.SharedPreferences
 import android.graphics.Color
 import android.util.Log
 import com.google.firebase.database.DatabaseReference
@@ -53,30 +52,19 @@ class Profile : Fragment() {
         val sharedPrefUserName = requireActivity().getSharedPreferences("my_prefs", Context.MODE_PRIVATE)
         val user = sharedPrefUserName.getString("User", "John Doe")?:"."
         val user_name=v.findViewById<TextView>(R.id.user_name)
-        val VON=v.findViewById<TextView>(R.id.VerifiedOrNot)
         // you have to access user name from firebase based on this user
 
         database=FirebaseDatabase.getInstance().getReference("VerifiedFarmers")
-        var allow=false
 
         database.child(user).addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
-                if (dataSnapshot.exists()) {
-                    Log.d("Firebase", "Data exists, allow = true")
-                    allow = true
-                } else {
-                    Log.d("Firebase", "Data does not exist, allow = false")
-                    allow = false
-                }
-                // Set the text and color here
-                updateVerificationStatus(allow)
+                updateVerificationStatus(dataSnapshot.exists())
             }
 
             override fun onCancelled(error: DatabaseError) {
                 Log.e("Firebase", "Database error: ${error.message}")
-                allow = false
                 // Set the text and color here
-                updateVerificationStatus(allow)
+                updateVerificationStatus(false)
             }
         })
 
