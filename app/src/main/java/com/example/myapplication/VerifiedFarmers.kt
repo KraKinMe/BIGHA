@@ -1,5 +1,5 @@
 package com.example.myapplication
 
-data class VerifiedFarmers(val FarmArea:String?=null , val GovtID:String?=null ){
+data class VerifiedFarmers(val userAddress:String?=null, val LandID:String?=null ,val FarmArea:String?=null ){
 
 }

@@ -57,57 +57,36 @@
                 android:textStyle="bold"
                 android:layout_gravity="center"
                 android:layout_marginBottom="20dp"/>
-            <!--            <View-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="30dp"/>-->
-            <!--            <TextView-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:text="@string/name"-->
-            <!--                android:alpha="0.7"-->
-            <!--                android:textStyle="bold"/>-->
-
-            <!--            HINTS TO BE THOUGHT HOW TO BE REASSIGNED FOR CHANGE IN LANG.-->
-            <!--            <EditText-->
-            <!--                android:id="@+id/nameEditText"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:hint="@string/your_name"-->
-            <!--                android:inputType="textPersonName"-->
-            <!--                />-->
-
-
-            <!--            <View-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="20dp"/>-->
-            <!--            <TextView-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:text="@string/Mobile_NO"-->
-            <!--                android:alpha="0.7"-->
-            <!--                android:textStyle="bold"/>-->
-
-            <!--            <EditText-->
-            <!--                android:id="@+id/MobileEditText"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:hint="@string/your_mob_no"-->
-            <!--                android:inputType="text|phone" />-->
-
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Farm Area"
+                android:text="Location"
+                android:alpha="0.7"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:id="@+id/Loacation"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Get Location"
+                android:id="@+id/getLocation"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Land Record Number"
                 android:alpha="0.7"
                 android:textStyle="bold"
                 android:layout_marginTop="20dp"/>
             <EditText
-                android:id="@+id/FarmArea"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="number"
-                android:hint="Enter in Acres" />
+                android:inputType="text"
+                android:hint="Khasra/Gata Number"
+                android:id="@+id/LandNo"/>
 
             <View
                 android:layout_width="wrap_content"
@@ -115,28 +94,16 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Farmer-ID"
+                android:text="Farm Area"
                 android:alpha="0.7"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
             <EditText
+                android:id="@+id/FarmArea"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
-                android:hint="Govt. Approved ID"
-                android:id="@+id/GovtID"/>
+                android:inputType="number"
+                android:hint="Enter in Acres" />
 
-            <!--            <RelativeLayout-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="wrap_content">-->
-
-            <!--                <CheckBox-->
-            <!--                    android:layout_width="wrap_content"-->
-            <!--                    android:layout_height="wrap_content"-->
-            <!--                    android:text="@string/Remember_me"-->
-            <!--                    android:layout_centerVertical="true"-->
-            <!--                    android:alpha="0.7"/>-->
-
-            <!--            </RelativeLayout>-->
 
             <View
                 android:layout_width="wrap_content"
