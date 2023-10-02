@@ -3,6 +3,7 @@ package com.example.myapplication
 
 
 import android.Manifest
+import android.app.Dialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,12 +11,18 @@ import android.view.View
 import android.content.Context
 import android.content.IntentSender
 import android.content.pm.PackageManager
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.location.Geocoder
 import android.net.Uri
+import android.view.Window
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
+import androidx.core.content.ContentProviderCompat.requireContext
 import com.example.myapplication.databinding.ActivityVerificationBinding
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.common.api.ResolvableApiException
@@ -40,6 +47,10 @@ class verificationActivity : AppCompatActivity() {
     private lateinit var binding: ActivityVerificationBinding
     private lateinit var locationRequest: LocationRequest
     private lateinit var fusedLocationProviderClient: FusedLocationProviderClient
+    private var man_Pin :String?=null
+    private var man_JanPad :String?=null
+    private var man_Tehsil :String?=null
+    private var man_Village :String?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,6 +68,12 @@ class verificationActivity : AppCompatActivity() {
         binding.getLocation.setOnClickListener(){
             //Permission Check
             checkLocationPermission()
+        }
+
+        binding.getManual.setOnClickListener {
+            showCustomDialogBox1()
+
+            userAddress="${man_Village},${man_Tehsil},${man_JanPad},${man_Pin},"
         }
 
         Verify.setOnClickListener {
@@ -79,6 +96,36 @@ class verificationActivity : AppCompatActivity() {
             }
         }
 
+    }
+
+    private fun showCustomDialogBox1() {
+        val dialog = Dialog(this) // Use 'this' to refer to the activity's context
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog.setCancelable(false)
+        dialog.setContentView(R.layout.layout_add_address)
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+
+        val Close : ImageView = dialog.findViewById(R.id.closethis)
+        val pinEditText: EditText = dialog.findViewById(R.id.man_pin)
+        val janPadEditText: EditText = dialog.findViewById(R.id.man_janpad)
+        val tehsilEditText: EditText = dialog.findViewById(R.id.man_tehsil)
+        val villageEditText: EditText = dialog.findViewById(R.id.man_village)
+        val btnSave:Button=dialog.findViewById(R.id.Save)
+
+        Close.setOnClickListener {
+            dialog.dismiss()
+        }
+
+        btnSave.setOnClickListener {
+            man_Pin = pinEditText.text.toString()
+            man_JanPad = janPadEditText.text.toString()
+            man_Tehsil = tehsilEditText.text.toString()
+            man_Village = villageEditText.text.toString()
+
+            dialog.dismiss()
+        }
+
+        dialog.show()
     }
 
     private fun checkLocationPermission() {
