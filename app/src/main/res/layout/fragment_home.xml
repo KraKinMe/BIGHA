@@ -85,7 +85,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="110dp"
-                    android:text="Krishi Nivesh"
+                    android:text="MicroFinance"
                     android:textColor="#000"
                     android:textSize="18sp"
                     android:textStyle="bold"/>
@@ -188,7 +188,7 @@
                 android:layout_gravity="center_horizontal"
                 android:text="Rental Platform"
                 android:textColor="#000"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textStyle="bold"/>
             <ImageView
                 android:layout_width="wrap_content"
