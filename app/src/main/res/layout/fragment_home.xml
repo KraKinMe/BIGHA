@@ -101,23 +101,6 @@
 
 
 
-                <!--                <ImageView-->
-<!--                    android:id="@+id/arrow_icon1"-->
-<!--                    android:layout_width="24dp"-->
-<!--                    android:layout_height="24dp"-->
-<!--                    android:layout_alignParentEnd="true"-->
-<!--                    android:layout_alignParentBottom="true"-->
-<!--                    android:layout_marginTop="28dp"-->
-<!--                    android:layout_marginEnd="14dp"-->
-<!--                    android:layout_marginBottom="17dp"-->
-<!--                    android:clickable="true"-->
-<!--                    android:contentDescription="Navigate"-->
-<!--                    android:focusable="true"-->
-<!--                    android:onClick="redirectMicro"-->
-<!--                    android:src="@drawable/right_arrow" />-->
-
-<!--            </RelativeLayout>-->
-
         </androidx.cardview.widget.CardView>
 
         <!-- CardView 2: Marketplace -->
